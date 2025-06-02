@@ -149,6 +149,7 @@
   padding: 8px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  z-index: 10000;
 }
 
 .menuButton:hover {
