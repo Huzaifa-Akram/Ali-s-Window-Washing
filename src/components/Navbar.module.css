@@ -350,11 +350,6 @@
   }
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Additional visual enhancements */
 .navbar::before {
   content: "";

@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       <section id="about" className={styles.section}>
-        <h2>About Ali's Window Washing</h2>
+        <h2>About Ali&apos;s Window Washing</h2>
         <p>Learn more about our company...</p>
       </section>
 

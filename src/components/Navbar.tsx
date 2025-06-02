@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
-import logo from "../../public/logo.png"; // Adjust the path as necessary
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,6 +51,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
+        {" "}
         {/* Logo */}
         <div className={styles.logo}>
           <motion.div
@@ -60,15 +61,20 @@ const Navbar = () => {
             className={styles.logoContent}
           >
             <div className={styles.logoIcon}>
-              <img src={logo.src} alt="Logo" className={styles.logoImage} />
-            </div>
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={50}
+                height={50}
+                className={styles.logoImage}
+              />
+            </div>{" "}
             <div className={styles.logoText}>
-              <span className={styles.companyName}>Ali's</span>
+              <span className={styles.companyName}>Ali&apos;s</span>
               <span className={styles.serviceType}>Window Washing</span>
             </div>
           </motion.div>
         </div>
-
         {/* Desktop Navigation */}
         <div className={styles.desktopNav}>
           {navItems.map((item, index) => (
@@ -95,7 +101,6 @@ const Navbar = () => {
             Get Quote
           </motion.button>
         </div>
-
         {/* Mobile Menu Button */}
         <motion.button
           className={styles.menuButton}
@@ -129,9 +134,10 @@ const Navbar = () => {
               animate="open"
               exit="closed"
             >
+              {" "}
               <div className={styles.mobileMenuHeader}>
                 <div className={styles.mobileLogoText}>
-                  <span className={styles.mobileCompanyName}>Ali's</span>
+                  <span className={styles.mobileCompanyName}>Ali&apos;s</span>
                   <span className={styles.mobileServiceType}>
                     Window Washing
                   </span>
