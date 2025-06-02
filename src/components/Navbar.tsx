@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
@@ -8,45 +8,55 @@ import Image from "next/image";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const navItems = useMemo(
+    () => [
+      { name: "Home", href: "#home" },
+      { name: "Services", href: "#services" },
+      { name: "About", href: "#about" },
+      { name: "Pricing", href: "#pricing" },
+      { name: "Contact", href: "#contact" },
+    ],
+    []
+  );
 
-  const menuVariants = {
-    closed: {
-      x: "100%",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
+  // Optimized animation variants with reduced complexity
+  const menuVariants = useMemo(
+    () => ({
+      closed: {
+        x: "100%",
+        transition: {
+          type: "tween",
+          duration: 0.3,
+          ease: "easeInOut",
+        },
       },
-    },
-    open: {
-      x: "0%",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
+      open: {
+        x: "0%",
+        transition: {
+          type: "tween",
+          duration: 0.3,
+          ease: "easeInOut",
+        },
       },
-    },
-  };
+    }),
+    []
+  );
 
-  const itemVariants = {
-    closed: {
-      x: 50,
-      opacity: 0,
-    },
-    open: {
-      x: 0,
-      opacity: 1,
-    },
-  };
+  const itemVariants = useMemo(
+    () => ({
+      closed: {
+        x: 30,
+        opacity: 0,
+      },
+      open: {
+        x: 0,
+        opacity: 1,
+      },
+    }),
+    []
+  );
 
   return (
     <nav className={styles.navbar}>
@@ -54,12 +64,7 @@ const Navbar = () => {
         {" "}
         {/* Logo */}
         <div className={styles.logo}>
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={styles.logoContent}
-          >
+          <div className={styles.logoContent}>
             <div className={styles.logoIcon}>
               <Image
                 src="/logo.png"
@@ -67,57 +72,39 @@ const Navbar = () => {
                 width={50}
                 height={50}
                 className={styles.logoImage}
+                priority
               />
-            </div>{" "}
+            </div>
             <div className={styles.logoText}>
               <span className={styles.companyName}>Ali&apos;s</span>
               <span className={styles.serviceType}>Window Washing</span>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </div>{" "}
         {/* Desktop Navigation */}
         <div className={styles.desktopNav}>
-          {navItems.map((item, index) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              className={styles.navLink}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -2 }}
-            >
+          {navItems.map((item) => (
+            <a key={item.name} href={item.href} className={styles.navLink}>
               {item.name}
-            </motion.a>
+            </a>
           ))}
-          <motion.button
-            className={styles.ctaButton}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Quote
-          </motion.button>
-        </div>
+          <button className={styles.ctaButton}>Get Quote</button>
+        </div>{" "}
         {/* Mobile Menu Button */}
-        <motion.button
+        <button
           className={styles.menuButton}
           onClick={toggleMenu}
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
+          aria-label="Toggle menu"
         >
           <div className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}>
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </motion.button>
-      </div>
-
+        </button>
+      </div>{" "}
       {/* Mobile Slide Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <>
             <motion.div
@@ -125,6 +112,7 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={toggleMenu}
             />
             <motion.div
@@ -134,7 +122,6 @@ const Navbar = () => {
               animate="open"
               exit="closed"
             >
-              {" "}
               <div className={styles.mobileMenuHeader}>
                 <div className={styles.mobileLogoText}>
                   <span className={styles.mobileCompanyName}>Ali&apos;s</span>
@@ -153,7 +140,11 @@ const Navbar = () => {
                     initial="closed"
                     animate="open"
                     exit="closed"
-                    transition={{ delay: index * 0.1 }}
+                    transition={{
+                      delay: index * 0.05,
+                      duration: 0.2,
+                      ease: "easeOut",
+                    }}
                     onClick={toggleMenu}
                   >
                     {item.name}
@@ -165,7 +156,11 @@ const Navbar = () => {
                   initial="closed"
                   animate="open"
                   exit="closed"
-                  transition={{ delay: navItems.length * 0.1 }}
+                  transition={{
+                    delay: navItems.length * 0.05,
+                    duration: 0.2,
+                    ease: "easeOut",
+                  }}
                   onClick={toggleMenu}
                 >
                   Get Free Quote
