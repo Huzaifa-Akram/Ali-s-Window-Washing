@@ -1,0 +1,42 @@
+/* Shared CSS Variables for Consistent Layout */
+:root {
+  /* Container and Layout Variables */
+  --container-max-width: 1200px;
+  --container-padding-desktop: 2rem;
+  --container-padding-tablet: 1.5rem;
+  --container-padding-mobile: 1rem;
+
+  /* Section Spacing */
+  --section-padding-y: 5rem;
+  --section-padding-y-mobile: 3rem;
+
+  /* Navbar Specific */
+  --navbar-height: 80px;
+  --navbar-container-padding: 1.25rem; /* 20px */
+
+  /* Responsive Breakpoints */
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 480px;
+}
+
+/* Shared Container Class */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+}

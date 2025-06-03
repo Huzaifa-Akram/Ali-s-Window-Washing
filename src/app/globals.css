@@ -1,4 +1,5 @@
 /* Global Styles for Ali's Window Washing */
+@import "../styles/variables.css";
 
 * {
   box-sizing: border-box;

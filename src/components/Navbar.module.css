@@ -13,9 +13,9 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max-width, 1200px);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--container-padding-desktop, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -339,7 +339,7 @@
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 var(--container-padding-tablet, 1.5rem);
     height: 70px;
   }
 
@@ -368,7 +368,7 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 12px;
+    padding: 0 var(--container-padding-mobile, 1rem);
   }
 
   .mobileMenu {

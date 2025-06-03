@@ -11,12 +11,12 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 0 2rem;
 }
 
 .heroContent {
-  max-width: 1200px;
+  max-width: var(--container-max-width, 1200px);
   margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 2rem);
   width: 100%;
   display: flex;
   align-items: center;
@@ -78,13 +78,34 @@
   box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
 }
 
+.wavyBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavyBottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+  transform: rotateX(180deg);
+}
+
+.wavyBottom svg path {
+  fill: #ffffff; /* Change this to match the background color of the section below */
+}
+
 @media (max-width: 768px) {
   .hero {
-    padding: 0 1rem;
     background-attachment: scroll;
   }
 
   .heroContent {
+    padding: 0 var(--container-padding-tablet, 1.5rem);
     flex-direction: column;
     text-align: center;
   }
@@ -95,5 +116,15 @@
 
   .description {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 0 var(--container-padding-mobile, 1rem);
+  }
+
+  .title {
+    font-size: 2rem;
   }
 }

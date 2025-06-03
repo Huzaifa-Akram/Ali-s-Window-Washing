@@ -7,18 +7,18 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* Hero Section */}
-      <section id="home">
+      <section id="home" className={styles.heroSection}>
         <Hero />
       </section>
 
-      {/* About Us Section */}
-      <section id="about">
-        <AboutUs />
+      {/* Book Service Section - Positioned between Hero and About */}
+      <section id="book-service" className={styles.bookServiceSection}>
+        <BookService />
       </section>
 
-      {/* Book Service Section */}
-      <section id="book-service">
-        <BookService />
+      {/* About Us Section */}
+      <section id="about" className={styles.aboutSection}>
+        <AboutUs />
       </section>
 
       {/* Demo Sections for Navbar Links */}

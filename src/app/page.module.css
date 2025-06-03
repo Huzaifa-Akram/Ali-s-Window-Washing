@@ -1,5 +1,9 @@
+/* Import CSS Variables */
+@import "../styles/variables.css";
+
 .container {
   min-height: 100vh;
+  position: relative;
 }
 
 .hero {
@@ -27,7 +31,7 @@
 .heroContent {
   text-align: center;
   max-width: 800px;
-  padding: 0 20px;
+  padding: 0 var(--container-padding-desktop, 2rem);
   position: relative;
   z-index: 1;
 }
@@ -107,7 +111,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 80px var(--container-padding-desktop, 2rem);
   text-align: center;
 }
 
@@ -129,7 +133,45 @@
   line-height: 1.6;
 }
 
+/* Hero Section Positioning */
+.heroSection {
+  position: relative;
+  z-index: 1;
+}
+
+/* Book Service Section - Positioned between Hero and About */
+.bookServiceSection {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* About Section Positioning */
+.aboutSection {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1060px) {
+  .bookServiceSection {
+    position: static;
+    height: auto;
+    pointer-events: auto;
+    padding: 2rem 1rem;
+    z-index: 5;
+  }
+}
 @media (max-width: 768px) {
+  .heroContent {
+    padding: 0 var(--container-padding-tablet, 1.5rem);
+  }
+
   .heroButtons {
     flex-direction: column;
     align-items: center;
@@ -142,10 +184,30 @@
   }
 
   .section {
-    padding: 60px 20px;
+    padding: 60px var(--container-padding-tablet, 1.5rem);
   }
 
   .section h2 {
     font-size: 2rem;
+  }
+
+  .aboutSection {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 0 var(--container-padding-mobile, 1rem);
+  }
+
+  .section {
+    padding: 60px var(--container-padding-mobile, 1rem);
+  }
+  .bookServiceSection {
+    position: static;
+    height: auto;
+    pointer-events: auto;
+    padding: 1rem;
   }
 }
