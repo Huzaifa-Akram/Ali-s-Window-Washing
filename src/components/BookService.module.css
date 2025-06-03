@@ -1,6 +1,3 @@
-/* Import CSS Variables */
-@import "../styles/variables.css";
-
 /* BookService form positioned on the right side, overlapping Hero and About sections */
 .bookServiceForm {
   position: absolute;
