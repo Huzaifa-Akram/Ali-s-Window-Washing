@@ -4,9 +4,12 @@ import styles from "./Hero.module.css";
 const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
+      {" "}
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
-          <p className={styles.subtitle}>INTRODUCING ALI'S WINDOW WASHING</p>
+          <p className={styles.subtitle}>
+            INTRODUCING ALI&apos;S WINDOW WASHING
+          </p>
           <h1 className={styles.title}>
             Worried about
             <br />
