@@ -11,13 +11,14 @@ const AboutUs: React.FC = () => {
             Most awarded cleaning
             <br />
             company since 1995.
-          </h2>          <p className={styles.description}>
-            Morning greater Lesser day given fruitful. can&apos;t moveth night i fish
-            be fish said good let saying saw forth fruitful day stars female
-            whales. God seed. Fruitful. Waters. Shall under in yielding saying
-            given dominion don&apos;t of to dry good void said. Creature dominion was
-            good creepeth give bring the doesn&apos;t first shall two signs is
-            gathered set.
+          </h2>{" "}
+          <p className={styles.description}>
+            Morning greater Lesser day given fruitful. can&apos;t moveth night i
+            fish be fish said good let saying saw forth fruitful day stars
+            female whales. God seed. Fruitful. Waters. Shall under in yielding
+            saying given dominion don&apos;t of to dry good void said. Creature
+            dominion was good creepeth give bring the doesn&apos;t first shall
+            two signs is gathered set.
           </p>
           <a href="#" className={styles.link}>
             Learn more about company
