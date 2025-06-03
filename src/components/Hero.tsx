@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
-          <p className={styles.subtitle}>INTRODUCING MOPPERS</p>
+          <p className={styles.subtitle}>INTRODUCING ALI'S WINDOW WASHING</p>
           <h1 className={styles.title}>
             Worried about
             <br />
