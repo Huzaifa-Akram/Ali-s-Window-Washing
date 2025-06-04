@@ -3,30 +3,44 @@ import styles from "./Hero.module.css";
 
 const Hero: React.FC = () => {
   return (
-    <section className={styles.hero}>
-      {" "}
+    <section
+      className={styles.hero}
+      role="banner"
+      aria-label="Hero section for Ali's Window Washing Services"
+    >
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
           <p className={styles.subtitle}>
             INTRODUCING ALI&apos;S WINDOW WASHING
           </p>
           <h1 className={styles.title}>
-            Worried about
-            <br />
-            your <span className={styles.highlight}>home & office</span>
-            <br />
-            cleaning?
+            Professional Window Cleaning Services for{" "}
+            <span className={styles.highlight}>Home & Office</span> in Your Area
           </h1>
           <p className={styles.description}>
-            Hire us! We are a professional cleaning company offering
-            <br />
-            all type of cleaning and maintenance services.
+            Expert window washing and cleaning services for residential and
+            commercial properties. Crystal clear results with professional
+            equipment and eco-friendly solutions.
           </p>
-          <button className={styles.ctaButton}>REQUEST A DEMO →</button>
+          <button
+            className={styles.ctaButton}
+            type="button"
+            aria-label="Request a free window cleaning demo"
+          >
+            REQUEST A FREE DEMO →
+          </button>
         </div>
       </div>
-      <div className={styles.wavyBottom}>
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <div
+        className={styles.wavyBottom}
+        role="img"
+        aria-label="Decorative wave pattern"
+      >
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
           <path
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
             opacity=".25"

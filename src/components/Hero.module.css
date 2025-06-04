@@ -85,18 +85,26 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .wavyBottom svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 60px;
+  height: 61px;
   transform: rotateX(180deg);
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -1px;
 }
 
 .wavyBottom svg path {
-  fill: #ffffff; /* Change this to match the background color of the section below */
+  fill: #f8fafc; /* Matches the AboutUs section background color */
 }
 
 @media (max-width: 768px) {

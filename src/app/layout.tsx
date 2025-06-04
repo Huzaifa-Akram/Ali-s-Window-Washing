@@ -3,14 +3,16 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Ali's Window Washing - Professional Window Cleaning Services",
+  title:
+    "Ali's Window Washing - Professional Window Cleaning Services Near You",
   description:
-    "Professional window cleaning services for residential and commercial properties. Crystal clear results guaranteed.",
+    "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Free estimates available.",
   keywords:
-    "window cleaning, window washing, residential cleaning, commercial cleaning, professional window service",
+    "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning",
   authors: [{ name: "Ali's Window Washing" }],
   creator: "Ali's Window Washing",
   publisher: "Ali's Window Washing",
+  category: "Home Services",
   robots: {
     index: true,
     follow: true,
@@ -25,16 +27,30 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Ali's Window Washing - Professional Window Cleaning Services",
+    title:
+      "Ali's Window Washing - Professional Window Cleaning Services Near You",
     description:
-      "Professional window cleaning services for residential and commercial properties. Crystal clear results guaranteed.",
+      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
     siteName: "Ali's Window Washing",
+    images: [
+      {
+        url: "/herobg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Professional window cleaning service in action",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ali's Window Washing - Professional Window Cleaning Services",
+    title:
+      "Ali's Window Washing - Professional Window Cleaning Services Near You",
     description:
-      "Professional window cleaning services for residential and commercial properties. Crystal clear results guaranteed.",
+      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
+    images: ["/herobg.jpg"],
+  },
+  verification: {
+    google: "your-google-verification-code-here", // Add your actual verification code
   },
 };
 
@@ -43,9 +59,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLdSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ali's Window Washing",
+    description:
+      "Professional window cleaning services for residential and commercial properties",
+    url: "https://aliswindowwashing.com",
+    serviceType: "Window Cleaning Service",
+    areaServed: {
+      "@type": "City",
+      name: "Local Area",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Window Cleaning Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Residential Window Cleaning",
+            description: "Professional window cleaning for homes",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Window Cleaning",
+            description:
+              "Professional window cleaning for offices and businesses",
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+        />
+      </head>
       <body>
         <Navbar />
         <main style={{ paddingTop: "80px" }}>{children}</main>
