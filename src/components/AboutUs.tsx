@@ -7,31 +7,31 @@ const AboutUs: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.textContent}>
+            {" "}
             <div className={styles.headerSection}>
-              <p className={styles.subtitle}>ABOUT ALI'S WINDOW WASHING</p>
+              <p className={styles.subtitle}>ABOUT ALI&apos;S WINDOW WASHING</p>
               <h2 className={styles.title}>
-                Canada's Premier
+                Canada&apos;s Premier
                 <br />
                 <span className={styles.highlight}>Eco-Friendly</span> Window
                 Cleaning Service
               </h2>
             </div>
-
             <div className={styles.description}>
+              {" "}
               <p className={styles.intro}>
-                Welcome to Ali's Window Washing, proudly serving communities
-                across Canada with crystal-clear results and environmental
-                responsibility at our core.
+                Welcome to Ali&apos;s Window Washing, proudly serving
+                communities across Canada with crystal-clear results and
+                environmental responsibility at our core.
               </p>
-
               <p className={styles.story}>
                 Founded with a passion for excellence and trained by
-                industry-leading professionals, we've revolutionized traditional
-                window cleaning with our innovative approach. Our commitment to
-                quality and sustainability sets us apart in the Canadian market.
+                industry-leading professionals, we&apos;ve revolutionized
+                traditional window cleaning with our innovative approach. Our
+                commitment to quality and sustainability sets us apart in the
+                Canadian market.
               </p>
             </div>
-
             <div className={styles.featuresGrid}>
               <div className={styles.feature}>
                 <div className={styles.iconWrapper}>
@@ -132,7 +132,6 @@ const AboutUs: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className={styles.ctaSection}>
               <a href="#contact" className={styles.primaryButton}>
                 Get Free Quote
