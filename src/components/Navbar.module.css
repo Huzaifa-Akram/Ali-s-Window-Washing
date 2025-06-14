@@ -37,7 +37,7 @@
 .logoIcon {
   width: 50px;
   height: 50px;
-  border: 2px solid #3b82f6;
+  border: 2px solid #6382f7;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -70,10 +70,10 @@
 .serviceType {
   font-size: 14px;
   font-weight: 500;
-  color: #3b82f6;
+  color: #6382f7;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-shadow: 0 1px 1px rgba(59, 130, 246, 0.2);
+  text-shadow: 0 1px 1px rgba(99, 130, 247, 0.2);
 }
 
 /* Desktop Navigation */
@@ -94,7 +94,7 @@
 }
 
 .navLink:hover {
-  color: #3b82f6;
+  color: #6382f7;
 }
 
 .navLink::after {
@@ -104,7 +104,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(90deg, #6382f7, #5a75f5);
   transition: width 0.2s ease;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .ctaButton {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -239,7 +239,7 @@
 .mobileServiceType {
   font-size: 16px;
   font-weight: 500;
-  color: #3b82f6;
+  color: #6382f7;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -289,13 +289,13 @@
 }
 
 .mobileNavLink:hover {
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
+  background: rgba(99, 130, 247, 0.1);
+  color: #6382f7;
   transform: translateX(8px);
 }
 
 .mobileCta {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   color: white;
   border: none;
   padding: 16px 20px;

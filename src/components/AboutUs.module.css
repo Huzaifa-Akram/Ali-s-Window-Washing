@@ -44,7 +44,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 3px;
-  color: #3b82f6;
+  color: #6382f7;
   margin-bottom: 1rem;
   text-transform: uppercase;
   position: relative;
@@ -58,7 +58,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(90deg, #6382f7, #5a75f5);
   border-radius: 1px;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -140,12 +140,12 @@
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(99, 130, 247, 0.3);
 }
 
 .icon {
@@ -181,7 +181,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -202,9 +202,9 @@
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   background: transparent;
-  color: #3b82f6;
+  color: #6382f7;
   text-decoration: none;
-  border: 2px solid #3b82f6;
+  border: 2px solid #6382f7;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -212,7 +212,7 @@
 }
 
 .secondaryButton:hover {
-  background: #3b82f6;
+  background: #6382f7;
   color: white;
   transform: translateY(-2px);
 }
@@ -230,13 +230,13 @@
   width: 100%;
   max-width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 40px rgba(99, 130, 247, 0.3);
 }
 
 .imageContainer::before {
@@ -276,7 +276,7 @@
 .cardIcon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   border-radius: 8px;
   display: flex;
   align-items: center;

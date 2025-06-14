@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import BookService from "@/components/BookService";
 import styles from "./page.module.css";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -21,10 +22,9 @@ export default function Home() {
         <AboutUs />
       </section>
 
-      {/* Demo Sections for Navbar Links */}
-      <section id="services" className={styles.section}>
-        <h2>Our Services</h2>
-        <p>Professional window cleaning services...</p>
+      {/* Services Section */}
+      <section id="services" className={styles.servicesSection}>
+        <Services />
       </section>
 
       <section id="pricing" className={styles.section}>

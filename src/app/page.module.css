@@ -43,7 +43,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -67,7 +67,7 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
   color: white;
   border: none;
   padding: 16px 32px;
@@ -86,8 +86,8 @@
 
 .secondaryButton {
   background: white;
-  color: #3b82f6;
-  border: 2px solid #3b82f6;
+  color: #6382f7;
+  border: 2px solid #6382f7;
   padding: 14px 30px;
   border-radius: 50px;
   font-weight: 600;
@@ -97,7 +97,7 @@
 }
 
 .secondaryButton:hover {
-  background: #3b82f6;
+  background: #6382f7;
   color: white;
   transform: translateY(-2px);
 }
@@ -110,6 +110,10 @@
   justify-content: center;
   padding: 80px var(--container-padding-desktop, 2rem);
   text-align: center;
+}
+
+.section1 {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
 }
 
 .section:nth-child(even) {
@@ -149,6 +153,12 @@
 
 /* About Section Positioning */
 .aboutSection {
+  position: relative;
+  z-index: 1;
+}
+
+/* Services Section Positioning */
+.servicesSection {
   position: relative;
   z-index: 1;
 }
