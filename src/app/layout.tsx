@@ -4,14 +4,14 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title:
-    "Ali's Window Washing - Professional Window Cleaning Services Near You",
+    "True North Window Washing - Professional Window Cleaning Services Near You",
   description:
     "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Free estimates available.",
   keywords:
     "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning",
-  authors: [{ name: "Ali's Window Washing" }],
-  creator: "Ali's Window Washing",
-  publisher: "Ali's Window Washing",
+  authors: [{ name: "True North Window Washing" }],
+  creator: "True North Window Washing",
+  publisher: "True North Window Washing",
   category: "Home Services",
   robots: {
     index: true,
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     title:
-      "Ali's Window Washing - Professional Window Cleaning Services Near You",
+      "True North Window Washing - Professional Window Cleaning Services Near You",
     description:
       "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
-    siteName: "Ali's Window Washing",
+    siteName: "True North Window Washing",
     images: [
       {
         url: "/herobg.jpg",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Ali's Window Washing - Professional Window Cleaning Services Near You",
+      "True North Window Washing - Professional Window Cleaning Services Near You",
     description:
       "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
     images: ["/herobg.jpg"],
@@ -62,10 +62,10 @@ export default function RootLayout({
   const jsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Ali's Window Washing",
+    name: "True North Window Washing",
     description:
       "Professional window cleaning services for residential and commercial properties",
-    url: "https://aliswindowwashing.com",
+    url: "https://truenorthwindowwashing.com",
     serviceType: "Window Cleaning Service",
     areaServed: {
       "@type": "City",

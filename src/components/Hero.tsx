@@ -6,12 +6,12 @@ const Hero: React.FC = () => {
     <section
       className={styles.hero}
       role="banner"
-      aria-label="Hero section for Ali's Window Washing Services"
+      aria-label="Hero section for True North Window Washing Services"
     >
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
           <p className={styles.subtitle}>
-            INTRODUCING ALI&apos;S WINDOW WASHING
+            INTRODUCING TRUE NORTH WINDOW WASHING
           </p>
           <h1 className={styles.title}>
             Professional Window Cleaning Services for{" "}

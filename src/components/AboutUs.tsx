@@ -9,7 +9,7 @@ const AboutUs: React.FC = () => {
           <div className={styles.textContent}>
             {" "}
             <div className={styles.headerSection}>
-              <p className={styles.subtitle}>ABOUT ALI&apos;S WINDOW WASHING</p>
+              <p className={styles.subtitle}>ABOUT TRUE NORTH WINDOW WASHING</p>
               <h2 className={styles.title}>
                 Canada&apos;s Premier
                 <br />
@@ -20,7 +20,7 @@ const AboutUs: React.FC = () => {
             <div className={styles.description}>
               {" "}
               <p className={styles.intro}>
-                Welcome to Ali&apos;s Window Washing, proudly serving
+                Welcome to True North Window Washing, proudly serving
                 communities across Canada with crystal-clear results and
                 environmental responsibility at our core.
               </p>

@@ -20,18 +20,18 @@ const Navbar = () => {
         aria-label="Main navigation"
       >
         <div className={styles.container}>
-          {/* Logo - Server-side rendered for better SEO */}
+          {/* Logo - Server-side rendered for better SEO */}{" "}
           <div className={styles.logo}>
             <a
               href="#home"
               className={styles.logoContent}
-              aria-label="Ali's Window Washing - Go to homepage"
-              title="Ali's Window Washing - Professional Window Cleaning Services"
+              aria-label="True North Window Washing - Go to homepage"
+              title="True North Window Washing - Professional Window Cleaning Services"
             >
               <div className={styles.logoIcon}>
                 <Image
                   src="/logo.png"
-                  alt="Ali's Window Washing Professional Cleaning Services"
+                  alt="True North Window Washing Professional Cleaning Services"
                   width={50}
                   height={50}
                   className={styles.logoImage}
@@ -39,7 +39,7 @@ const Navbar = () => {
                 />
               </div>
               <div className={styles.logoText}>
-                <span className={styles.companyName}>Ali&apos;s</span>
+                <span className={styles.companyName}>True North</span>
                 <span className={styles.serviceType}>Window Washing</span>
               </div>
             </a>
