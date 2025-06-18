@@ -4,9 +4,10 @@ export interface ServiceData {
   description: string;
   startingPrice: number;
   image: string;
-  category: "residential" | "commercial" | "specialized";
+  category: "residential" | "commercial" | "maintenance";
   features: string[];
   seoKeywords: string[];
+  popular?: boolean;
 }
 
 export const servicesData: ServiceData[] = [
@@ -14,130 +15,85 @@ export const servicesData: ServiceData[] = [
     id: 1,
     title: "Residential Window Cleaning",
     description:
-      "Professional window cleaning for homes and apartments. Crystal clear windows that let natural light shine through beautifully.",
-    startingPrice: 50,
+      "Professional home window cleaning service for houses, condos, and apartments. Get crystal-clear views and enhanced curb appeal with our meticulous attention to detail.",
+    startingPrice: 75,
     image: "/service1.jpg",
     category: "residential",
+    popular: true,
     features: [
       "Interior & Exterior Cleaning",
-      "Screen Cleaning Included",
-      "Frame & Sill Cleaning",
+      "Screen Cleaning & Repair",
+      "Window Sill & Frame Detailing",
       "Eco-Friendly Solutions",
+      "Free Re-cleaning Guarantee",
+      "Flexible Scheduling",
     ],
     seoKeywords: [
       "residential window cleaning",
       "home window washing",
-      "apartment window service",
+      "house window service",
+      "apartment window cleaning",
     ],
   },
   {
     id: 2,
     title: "Commercial Window Cleaning",
     description:
-      "Regular window maintenance for offices, retail stores, and commercial buildings. Keep your business looking professional.",
-    startingPrice: 100,
+      "Professional window cleaning for offices, retail stores, restaurants, and commercial buildings. Maintain a pristine business image with our reliable commercial services.",
+    startingPrice: 150,
     image: "/service2.jpg",
     category: "commercial",
+    popular: true,
     features: [
-      "Scheduled Maintenance",
+      "Scheduled Regular Maintenance",
       "High-Rise Access Equipment",
-      "Insurance & Bonding",
-      "Flexible Timing",
+      "Fully Licensed & Insured",
+      "Flexible Business Hours",
+      "Storefront Specialist",
+      "Contract Pricing Available",
     ],
     seoKeywords: [
       "commercial window cleaning",
       "office window washing",
       "business window service",
+      "retail window cleaning",
     ],
   },
   {
     id: 3,
-    title: "High-Rise Window Cleaning",
+    title: "Maintenance Package Plans",
     description:
-      "Specialized equipment and certified technicians for multi-story buildings and skyscrapers. Safety is our top priority.",
-    startingPrice: 250,
+      "Regular window cleaning maintenance plans designed to keep your windows spotless year-round. Choose from monthly, bi-monthly, or seasonal cleaning schedules.",
+    startingPrice: 60,
     image: "/service3.jpg",
-    category: "specialized",
+    category: "maintenance",
     features: [
-      "Certified Rope Access",
-      "Safety Equipment Included",
-      "Licensed & Insured",
-      "Weather Monitoring",
+      "Monthly or Seasonal Plans",
+      "Priority Booking & Scheduling",
+      "Discounted Package Rates",
+      "Weather Protection Guarantee",
+      "Emergency Clean-Up Service",
+      "Annual Window Health Check",
     ],
     seoKeywords: [
-      "high-rise window cleaning",
-      "skyscraper window washing",
-      "rope access window cleaning",
-    ],
-  },
-  {
-    id: 4,
-    title: "Post-Construction Cleanup",
-    description:
-      "Thorough window cleaning after construction or renovation projects. Remove all debris, paint, and construction residue.",
-    startingPrice: 150,
-    image: "/service4.jpg",
-    category: "specialized",
-    features: [
-      "Construction Debris Removal",
-      "Paint & Adhesive Removal",
-      "Detail Frame Cleaning",
-      "Final Quality Inspection",
-    ],
-    seoKeywords: [
-      "post construction window cleaning",
-      "renovation window cleanup",
-      "construction window washing",
-    ],
-  },
-  {
-    id: 5,
-    title: "Solar Panel Window Cleaning",
-    description:
-      "Specialized cleaning for solar panel installations and adjacent windows. Maximize efficiency and maintain clarity.",
-    startingPrice: 120,
-    image: "/service6.jpg",
-    category: "specialized",
-    features: [
-      "Solar Panel Safe Solutions",
-      "Efficiency Optimization",
-      "Electrical Safety Protocols",
-      "Regular Maintenance Plans",
-    ],
-    seoKeywords: [
-      "solar panel window cleaning",
-      "solar window washing",
-      "renewable energy window service",
-    ],
-  },
-  {
-    id: 6,
-    title: "Pressure Washing Windows",
-    description:
-      "Deep cleaning service using professional pressure washing equipment for heavily soiled exterior windows and frames.",
-    startingPrice: 80,
-    image: "/service5.jpg",
-    category: "residential",
-    features: [
-      "High-Pressure Equipment",
-      "Deep Stain Removal",
-      "Frame & Trim Cleaning",
-      "Gutter Edge Cleaning",
-    ],
-    seoKeywords: [
-      "pressure washing windows",
-      "deep window cleaning",
-      "exterior window pressure wash",
+      "window maintenance plans",
+      "regular window cleaning",
+      "window cleaning packages",
+      "seasonal window service",
     ],
   },
 ];
 
 export const getServicesByCategory = (
-  category: "residential" | "commercial" | "specialized"
+  category: "residential" | "commercial" | "maintenance"
 ) => {
   return servicesData.filter((service) => service.category === category);
 };
 
 export const getFeaturedServices = () => {
-  return servicesData.slice(0, 6);
+  return servicesData.slice(0, 3);
+};
+
+export const getPopularServices = () => {
+  return servicesData.filter((service) => service.popular);
 };

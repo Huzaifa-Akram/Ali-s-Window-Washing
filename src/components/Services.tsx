@@ -19,13 +19,13 @@ function Services() {
           <div className={styles.line}>
             <h2 className={styles.title} id="services-heading" itemProp="name">
               Professional Window Cleaning Services in Your Area
-            </h2>
+            </h2>{" "}
             <div className={styles.descriptionContainer}>
               <p className={styles.description} itemProp="description">
-                We provide comprehensive window cleaning solutions for
-                residential homes, commercial businesses, and specialized
-                projects. Our professional team delivers crystal-clear results
-                for windows, frames, and screens.
+                Specialized window cleaning services tailored to your needs.
+                From residential homes to commercial buildings, premium deep
+                cleaning to regular maintenance plans - we deliver spotless,
+                streak-free windows every time.
               </p>
               <button
                 className={styles.moreServicesButton}
