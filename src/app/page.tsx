@@ -3,6 +3,7 @@ import AboutUs from "@/components/AboutUs";
 import BookService from "@/components/BookService";
 import styles from "./page.module.css";
 import Services from "@/components/Services";
+import PriceEstimator from "@/components/PriceEstimator";
 
 export default function Home() {
   return (
@@ -27,9 +28,9 @@ export default function Home() {
         <Services />
       </section>
 
-      <section id="pricing" className={styles.section}>
-        <h2>Pricing</h2>
-        <p>Transparent and competitive pricing...</p>
+      {/* Price Estimator Section */}
+      <section id="price-estimator" className={styles.priceEstimatorSection}>
+        <PriceEstimator />
       </section>
 
       <section id="contact" className={styles.section}>

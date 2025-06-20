@@ -161,6 +161,27 @@
 .servicesSection {
   position: relative;
   z-index: 1;
+  padding: var(--section-padding-y, 5rem) 0;
+}
+
+/* Price Estimator Section */
+.priceEstimatorSection {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.priceEstimatorSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    repeat;
+  opacity: 0.7;
+  z-index: 0;
 }
 
 /* Responsive adjustments */

@@ -66,8 +66,9 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
                 >
                   {item.name}
                 </a>
-              ))}
-              <button
+              ))}{" "}
+              <a
+                href="#price-estimator"
                 className={`${styles.mobileCta} ${
                   isOpen ? styles.mobileCtaActive : ""
                 }`}
@@ -75,7 +76,7 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
                 onClick={toggleMenu}
               >
                 Get Free Quote
-              </button>
+              </a>
             </div>
           </div>
         </>

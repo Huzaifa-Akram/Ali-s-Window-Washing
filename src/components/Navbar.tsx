@@ -9,7 +9,6 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
   ];
   return (
@@ -68,15 +67,16 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 </li>
-              ))}
+              ))}{" "}
               <li>
-                <button
+                <a
+                  href="#price-estimator"
                   className={styles.ctaButton}
                   title="Get a free quote for window cleaning services"
                   aria-label="Request a free quote for professional window cleaning"
                 >
                   Get Quote
-                </button>
+                </a>
               </li>
             </ul>
           </div>

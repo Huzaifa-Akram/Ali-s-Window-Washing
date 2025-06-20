@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title:
     "True North Window Washing - Professional Window Cleaning Services Near You",
   description:
-    "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Free estimates available.",
+    "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes with our online estimator.",
   keywords:
-    "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning",
+    "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning, free window cleaning quote, instant estimate, eavestrough cleaning",
   authors: [{ name: "True North Window Washing" }],
   creator: "True North Window Washing",
   publisher: "True North Window Washing",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title:
       "True North Window Washing - Professional Window Cleaning Services Near You",
     description:
-      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
+      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
     siteName: "True North Window Washing",
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title:
       "True North Window Washing - Professional Window Cleaning Services Near You",
     description:
-      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results.",
+      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
     images: ["/herobg.jpg"],
   },
   verification: {
@@ -65,7 +65,7 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     name: "True North Window Washing",
     description:
-      "Professional window cleaning services for residential and commercial properties",
+      "Professional window cleaning services for residential and commercial properties with instant online quotes",
     url: "https://truenorthwindowwashing.com",
     serviceType: "Window Cleaning Service",
     areaServed: {
@@ -81,7 +81,8 @@ export default function RootLayout({
           itemOffered: {
             "@type": "Service",
             name: "Residential Window Cleaning",
-            description: "Professional window cleaning for homes",
+            description:
+              "Professional window cleaning for homes with free estimates",
           },
         },
         {
@@ -93,7 +94,43 @@ export default function RootLayout({
               "Professional window cleaning for offices and businesses",
           },
         },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Eavestrough Cleaning",
+            description:
+              "Professional eavestrough and gutter cleaning services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Interior Window Cleaning",
+            description: "Professional interior window cleaning services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Exterior Window Cleaning",
+            description: "Professional exterior window cleaning services",
+          },
+        },
       ],
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-204-414-0944",
+      contactType: "customer service",
+      email: "info@pictureperfectwc.ca",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "50",
     },
   };
 

@@ -1,0 +1,73 @@
+<svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left White/Light Gray Section (Tallest) -->
+  <rect x="50" y="80" width="80" height="220" fill="#f5f5f5" stroke="#d0d0d0" stroke-width="2"/>
+  
+  <!-- Main Orange/Brown Section (Medium height) -->
+  <rect x="130" y="120" width="120" height="180" fill="#cd853f" stroke="#b8722f" stroke-width="2"/>
+  
+  <!-- Right Blue/Teal Section (Tallest) -->
+  <rect x="250" y="60" width="80" height="240" fill="#4682b4" stroke="#2e5984" stroke-width="2"/>
+  
+  <!-- Small connecting section -->
+  
+  <!-- Left section - Stairs and entrance -->
+  <!-- Stair steps -->
+  
+  
+  
+  <!-- Left section upper windows (smaller, horizontal strips) -->
+  <rect x="65" y="180" width="50" height="15" fill="#87ceeb" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="77.5" y1="180" x2="77.5" y2="195" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="90" y1="180" x2="90" y2="195" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="102.5" y1="180" x2="102.5" y2="195" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <rect x="65" y="140" width="50" height="15" fill="#87ceeb" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="77.5" y1="140" x2="77.5" y2="155" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="90" y1="140" x2="90" y2="155" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="102.5" y1="140" x2="102.5" y2="155" stroke="#2c2c2c" stroke-width="1"/>
+  
+
+  
+  <!-- Main orange section windows (corrected placement) -->
+  <!-- Ground floor main - moved away from door -->
+  <rect x="135" y="240" width="30" height="40" fill="#ff9500" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="150" y1="240" x2="150" y2="280" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="135" y1="260" x2="165" y2="260" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <rect x="215" y="240" width="30" height="40" fill="#ff9500" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="230" y1="240" x2="230" y2="280" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="215" y1="260" x2="245" y2="260" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Second floor main -->
+  <rect x="145" y="180" width="35" height="40" fill="#ff9500" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="162.5" y1="180" x2="162.5" y2="220" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="145" y1="200" x2="180" y2="200" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <rect x="200" y="180" width="35" height="40" fill="#ff9500" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="217.5" y1="180" x2="217.5" y2="220" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="200" y1="200" x2="235" y2="200" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Half floor main -->
+  <rect x="170" y="140" width="30" height="25" fill="#ff9500" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="185" y1="140" x2="185" y2="165" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Right blue section windows (vertical strip) -->
+  <rect x="265" y="100" width="20" height="180" fill="#87ceeb" stroke="#2c2c2c" stroke-width="1.5"/>
+  <!-- Horizontal dividers for floors -->
+  <line x1="265" y1="140" x2="285" y2="140" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="265" y1="180" x2="285" y2="180" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="265" y1="220" x2="285" y2="220" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="265" y1="260" x2="285" y2="260" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Small windows on right section -->
+  <rect x="300" y="200" width="20" height="25" fill="#87ceeb" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="310" y1="200" x2="310" y2="225" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <rect x="300" y="160" width="20" height="25" fill="#87ceeb" stroke="#2c2c2c" stroke-width="1.5"/>
+  <line x1="310" y1="160" x2="310" y2="185" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Front door on main section (centered) -->
+  <rect x="175" y="260" width="25" height="40" fill="#654321" stroke="#4a2c17" stroke-width="1.5"/>
+  <circle cx="193" cy="275" r="1.5" fill="#ffd700">
+  </circle>
+</svg>
