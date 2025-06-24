@@ -70,16 +70,19 @@ const Footer: React.FC = () => {
       className={styles.footer}
       role="contentinfo"
       aria-label="Footer with company information and navigation links"
-    >      {/* Main Footer Content */}
+    >
+      {" "}
+      {/* Main Footer Content */}
       <div className={styles.mainFooter}>
         <div className={`container ${styles.footerContainer}`}>
           <div className={styles.footerGrid}>
             {/* Company Info Column */}
             <div className={styles.companyColumn}>
               <div className={styles.footerLogo}>
+                {" "}
                 <div className={styles.logoContainer}>
                   <Image
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="True North Window Washing Professional Cleaning Services"
                     width={60}
                     height={60}
@@ -227,7 +230,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>      {/* Bottom Bar */}
+      </div>{" "}
+      {/* Bottom Bar */}
       <div className={styles.bottomBar}>
         <div className={`container ${styles.footerContainer}`}>
           <div className={styles.bottomContent}>

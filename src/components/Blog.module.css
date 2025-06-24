@@ -1,0 +1,362 @@
+.blogSection {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+.blogSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(99, 130, 247, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(139, 92, 246, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.headerSection {
+  text-align: left;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6382f7;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.line {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  position: relative;
+  max-width: 500px;
+  flex-shrink: 0;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 600px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.viewAllButton {
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(99, 130, 247, 0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viewAllButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 130, 247, 0.4);
+  background: linear-gradient(135deg, #5a75f5, #6382f7);
+}
+
+.viewAllButton svg {
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.viewAllButton:hover svg {
+  transform: translateX(2px);
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 400px));
+  gap: 3rem;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+
+.callToAction {
+  background: linear-gradient(135deg, #6382f7, #5a75f5);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.callToAction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    repeat;
+  opacity: 0.3;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.ctaDescription {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryCta,
+.secondaryCta {
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  text-align: center;
+}
+
+.primaryCta {
+  background: white;
+  color: #6382f7;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.primaryCta:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.secondaryCta {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondaryCta:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .line {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .title {
+    font-size: 2.5rem;
+    max-width: none;
+  }
+
+  .description {
+    font-size: 1.05rem;
+  }
+
+  .descriptionContainer {
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+  .blogGrid {
+    grid-template-columns: repeat(2, minmax(280px, 350px));
+    gap: 1.25rem;
+    justify-content: start;
+  }
+
+  .callToAction {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .headerSection {
+    margin-bottom: 2.5rem;
+  }
+
+  .descriptionContainer {
+    gap: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+  .blogGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .callToAction {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogSection {
+    padding: 50px 0;
+  }
+
+  .headerSection {
+    margin-bottom: 32px;
+  }
+
+  .subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .callToAction {
+    padding: 24px 20px;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Focus and accessibility */
+.viewAllButton:focus-visible,
+.primaryCta:focus-visible,
+.secondaryCta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Animation for scroll-triggered effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blogGrid > * {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.blogGrid > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.blogGrid > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.blogGrid > *:nth-child(3) {
+  animation-delay: 0.3s;
+}

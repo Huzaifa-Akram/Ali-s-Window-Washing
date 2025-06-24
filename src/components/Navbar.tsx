@@ -29,7 +29,7 @@ const Navbar = () => {
             >
               <div className={styles.logoIcon}>
                 <Image
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="True North Window Washing Professional Cleaning Services"
                   width={50}
                   height={50}

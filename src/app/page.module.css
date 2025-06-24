@@ -184,6 +184,12 @@
   z-index: 0;
 }
 
+/* Blog Section */
+.blogSection {
+  position: relative;
+  z-index: 1;
+}
+
 /* Responsive adjustments */
 
 @media (max-width: 1060px) {

@@ -71,7 +71,8 @@
     45deg,
     transparent,
     transparent 100px,
-    rgba(59, 130, 246, 0.03) 100px,    rgba(59, 130, 246, 0.03) 102px
+    rgba(59, 130, 246, 0.03) 100px,
+    rgba(59, 130, 246, 0.03) 102px
   );
   pointer-events: none;
   opacity: 0.5;
@@ -106,10 +107,7 @@
 }
 
 .logoImage {
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem;
-  backdrop-filter: blur(10px);
+  filter: invert(1) brightness(1);
 }
 
 .logoText {
@@ -375,7 +373,7 @@
 
 /* CTA Button */
 .ctaSection {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .ctaButton {
@@ -496,11 +494,10 @@
   .mainFooter {
     padding: 3rem 0 2rem;
   }
-
   .footerGrid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   .companyColumn {
@@ -509,29 +506,28 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
-
   .footerLogo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 1.5rem;
   }
 
   .logoContainer {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .logoText {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .companyDescription {
-    text-align: center;
+    text-align: left;
     max-width: 90%;
-    margin: 0 auto 2rem auto;
+    margin: 0 0 2rem 0;
     line-height: 1.7;
   }
 
@@ -539,44 +535,43 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .socialTitle {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
   }
 
   .socialLinks {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
   }
-
   /* Links and Services Columns */
   .linksColumn,
   .servicesColumn {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
   .columnTitle {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.5rem;
   }
 
   .columnTitle::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
   }
 
   .linksList {
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .linksList li {
@@ -595,15 +590,13 @@
     background: rgba(59, 130, 246, 0.1);
     transform: none;
   }
-
   /* Contact Column */
   .contactColumn {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
-
   .contactInfo {
     width: 100%;
     display: flex;
@@ -611,16 +604,16 @@
     align-items: center;
   }
   .contactItem {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     width: 100%;
     max-width: 300px;
     margin: 0 auto 1.5rem auto;
   }
 
   .contactDetails {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     width: 100%;
     max-width: 280px;
   }
@@ -628,15 +621,15 @@
   .contactLink,
   .contactText,
   .contactAddress {
-    text-align: center;
+    text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
   }
-
   .ctaSection {
     text-align: center;
     width: 100%;
+    margin-top: 1rem;
   }
 
   .ctaButton {
@@ -653,7 +646,6 @@
   .copyright {
     text-align: center;
   }
-
   .legalLinks {
     flex-wrap: wrap;
     justify-content: center;
@@ -679,13 +671,13 @@
   .footerGrid {
     gap: 2rem;
   }
-
   .companyColumn {
     padding: 0 1rem;
   }
 
   .logoContainer {
     gap: 0.75rem;
+    justify-content: flex-start;
   }
 
   .companyName {
@@ -701,9 +693,9 @@
     margin-bottom: 1.25rem;
     line-height: 1.5;
   }
-
   .socialLinks {
     gap: 1rem;
+    justify-content: flex-start;
   }
 
   .socialLink {
@@ -732,7 +724,7 @@
   .contactItem {
     padding: 0.875rem;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 0.5rem;
     max-width: 280px;
     margin: 0 auto 1rem auto;
@@ -740,11 +732,11 @@
 
   .contactIcon {
     margin-top: 0;
-    align-self: center;
+    align-self: flex-start;
   }
   .contactDetails {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     line-height: 1.3;
     width: 100%;
     max-width: 260px;
@@ -753,7 +745,7 @@
   .contactLabel {
     font-size: 0.7rem;
     margin-bottom: 0.25rem;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -762,15 +754,14 @@
   .contactText,
   .contactAddress {
     font-size: 0.85rem;
-    text-align: center;
+    text-align: left;
     line-height: 1.4;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
   }
-
   .ctaButton {
-    padding: 1rem 2rem;
+    padding: 0.875rem 2rem;
     font-size: 0.9rem;
     width: 100%;
     max-width: 280px;
@@ -789,19 +780,20 @@
     font-size: 0.85rem;
     line-height: 1.5;
   }
-
   .legalLinks {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.75rem;
     align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
-
   .legalLink {
     font-size: 0.85rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 0.75rem;
     width: fit-content;
     text-align: center;
     border-radius: 8px;
+    white-space: nowrap;
   }
 }
 
@@ -833,11 +825,10 @@
     line-height: 1.4;
     margin-bottom: 1rem;
   }
-
   .socialLinks {
     gap: 0.75rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .socialLink {
@@ -869,12 +860,12 @@
     max-width: 260px;
     margin: 0 auto 0.875rem auto;
     gap: 0.375rem;
-    text-align: center;
+    text-align: left;
   }
 
   .contactDetails {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     width: 100%;
     max-width: 240px;
   }
@@ -882,7 +873,7 @@
   .contactLabel {
     font-size: 0.65rem;
     margin-bottom: 0.125rem;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -892,13 +883,13 @@
   .contactAddress {
     font-size: 0.8rem;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
   }
   .ctaButton {
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.8rem;
     max-width: 260px;
     line-height: 1.2;
@@ -908,11 +899,11 @@
     font-size: 0.75rem;
     line-height: 1.4;
   }
-
   .legalLink {
     font-size: 0.75rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     line-height: 1.2;
+    white-space: nowrap;
   }
 }
 

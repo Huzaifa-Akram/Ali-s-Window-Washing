@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./ServiceCard.module.css";
 import { getFeaturedServices } from "../data/servicedata";
 import { ArrowRight } from "lucide-react";
@@ -23,14 +24,14 @@ function ServiceCard() {
           itemType="https://schema.org/Service"
           aria-labelledby={`service-title-${service.id}`}
         >
-          <img
+          {" "}
+          <Image
             src={service.image}
             alt={`${service.title} - Professional window cleaning service starting at $${service.startingPrice}. ${service.description}`}
             className={styles.image}
-            itemProp="image"
-            loading={index > 2 ? "lazy" : "eager"}
-            width="300"
-            height="200"
+            width={300}
+            height={200}
+            priority={index <= 2}
           />
           <h3
             className={styles.title}
