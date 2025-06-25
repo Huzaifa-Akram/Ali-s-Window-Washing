@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import NavbarClient from "./NavbarClient";
 
 const Navbar = () => {
   // Static navigation items - better for SEO as they're server-side rendered
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/#about" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/#contact" },
   ];
   return (
     <header role="banner">
@@ -21,8 +23,8 @@ const Navbar = () => {
         <div className={styles.container}>
           {/* Logo - Server-side rendered for better SEO */}{" "}
           <div className={styles.logo}>
-            <a
-              href="#home"
+            <Link
+              href="/"
               className={styles.logoContent}
               aria-label="True North Window Washing - Go to homepage"
               title="True North Window Washing - Professional Window Cleaning Services"
@@ -41,7 +43,7 @@ const Navbar = () => {
                 <span className={styles.companyName}>True North</span>
                 <span className={styles.serviceType}>Window Washing</span>
               </div>
-            </a>
+            </Link>
           </div>{" "}
           {/* Desktop Navigation - Server-side rendered for better SEO */}
           <div className={styles.desktopNav}>
@@ -58,25 +60,25 @@ const Navbar = () => {
             >
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link
                     href={item.href}
                     className={styles.navLink}
                     title={`Navigate to ${item.name} section`}
                     aria-label={`Go to ${item.name} section`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}{" "}
               <li>
-                <a
-                  href="#price-estimator"
+                <Link
+                  href="/#price-estimator"
                   className={styles.ctaButton}
                   title="Get a free quote for window cleaning services"
                   aria-label="Request a free quote for professional window cleaning"
                 >
                   Get Quote
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

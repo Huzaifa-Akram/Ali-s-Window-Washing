@@ -152,7 +152,7 @@ export default function SearchAndFilter({
               <h3 className={styles.noResultsTitle}>No articles found</h3>
               <p className={styles.noResultsText}>
                 Try adjusting your search terms or browse all categories to find
-                what you're looking for.
+                what you&apos;re looking for.
               </p>
               <button onClick={handleReset} className={styles.resetButton}>
                 Show All Articles

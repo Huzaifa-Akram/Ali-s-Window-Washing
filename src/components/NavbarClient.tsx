@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
+import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 interface NavbarClientProps {
@@ -55,7 +56,7 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
             </div>
             <div className={styles.mobileNavItems}>
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className={`${styles.mobileNavLink} ${
@@ -65,10 +66,10 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
                   onClick={toggleMenu}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}{" "}
-              <a
-                href="#price-estimator"
+              <Link
+                href="/#price-estimator"
                 className={`${styles.mobileCta} ${
                   isOpen ? styles.mobileCtaActive : ""
                 }`}
@@ -76,7 +77,7 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
                 onClick={toggleMenu}
               >
                 Get Free Quote
-              </a>
+              </Link>
             </div>
           </div>
         </>

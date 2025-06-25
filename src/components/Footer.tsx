@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const contactInfo = {
-    phone: "(555) 123-4567",
+    phone: "+1 (431) 293-4714",
     email: "info@truenorthwindowwashing.com",
     address: "123 Main Street, Your City, State 12345",
     hours: "Mon-Sat: 8AM-6PM",
@@ -50,23 +50,25 @@ const Footer: React.FC = () => {
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
-    { name: "Book Service", href: "#book-service" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Contact", href: "/#contact" },
+    { name: "Book Service", href: "/#book-service" },
+    { name: "Blog", href: "/blog" },
   ];
   const services = [
-    { name: "Residential Window Cleaning", href: "#services" },
-    { name: "Commercial Window Cleaning", href: "#services" },
-    { name: "Maintenance Package Plans", href: "#services" },
-    { name: "Free Estimates", href: "#contact" },
-    { name: "Emergency Services", href: "#contact" },
+    { name: "Residential Window Cleaning", href: "/#services" },
+    { name: "Commercial Window Cleaning", href: "/#services" },
+    { name: "Maintenance Package Plans", href: "/#services" },
+    { name: "Free Estimates", href: "/#contact" },
+    { name: "Emergency Services", href: "/#contact" },
   ];
 
   return (
     <footer
+      id="contact"
       className={styles.footer}
       role="contentinfo"
       aria-label="Footer with company information and navigation links"
@@ -220,7 +222,7 @@ const Footer: React.FC = () => {
               {/* CTA Button */}
               <div className={styles.ctaSection}>
                 <a
-                  href="#book-service"
+                  href="/#book-service"
                   className={styles.ctaButton}
                   aria-label="Book your window cleaning service now"
                 >
