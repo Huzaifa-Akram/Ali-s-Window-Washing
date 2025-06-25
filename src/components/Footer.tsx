@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Phone,
   Mail,
@@ -133,13 +134,13 @@ const Footer: React.FC = () => {
                 <ul className={styles.linksList}>
                   {quickLinks.map((link) => (
                     <li key={link.name}>
-                      <a
+                      <Link
                         href={link.href}
                         className={styles.footerLink}
                         aria-label={`Navigate to ${link.name} section`}
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -153,13 +154,13 @@ const Footer: React.FC = () => {
                 <ul className={styles.linksList}>
                   {services.map((service) => (
                     <li key={service.name}>
-                      <a
+                      <Link
                         href={service.href}
                         className={styles.footerLink}
                         aria-label={`Learn more about ${service.name}`}
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -221,13 +222,13 @@ const Footer: React.FC = () => {
 
               {/* CTA Button */}
               <div className={styles.ctaSection}>
-                <a
+                <Link
                   href="/#book-service"
                   className={styles.ctaButton}
                   aria-label="Book your window cleaning service now"
                 >
                   Book Service Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -243,12 +244,12 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className={styles.legalLinks}>
-              <a href="/privacy-policy" className={styles.legalLink}>
+              <Link href="/privacy-policy" className={styles.legalLink}>
                 Privacy Policy
-              </a>
-              <a href="/terms-of-service" className={styles.legalLink}>
+              </Link>
+              <Link href="/terms-of-service" className={styles.legalLink}>
                 Terms of Service
-              </a>
+              </Link>
               <a href="/sitemap.xml" className={styles.legalLink}>
                 Sitemap
               </a>
