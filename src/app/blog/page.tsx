@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import BlogCard from "@/components/BlogCard";
-import { blogPosts, blogCategories } from "@/data/blogdata";
+import Image from "next/image";
+import { blogPosts } from "@/data/blogdata";
 import type { Metadata } from "next";
+import styles from "./page.module.css";
+import SearchAndFilter from "@/components/SearchAndFilter";
 
 export const metadata: Metadata = {
-  title: "Window Cleaning Blog | Expert Tips & Guides | Ali's Window Washing",
+  title:
+    "Window Cleaning Blog | Expert Tips & Guides | True North Window Washing",
   description:
     "Expert window cleaning tips, maintenance guides, cost-saving strategies, and industry insights. Professional advice for residential and commercial window care.",
   keywords: [
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Window Cleaning Blog | Expert Tips & Guides",
     description:
-      "Expert window cleaning tips, maintenance guides, and industry insights from Ali's Window Washing professionals.",
+      "Expert window cleaning tips, maintenance guides, and industry insights from True North Window Washing professionals.",
     type: "website",
     images: ["/service1.jpg"],
   },
@@ -32,74 +35,137 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <nav className="mb-8">
-            <Link
-              href="/"
-              className="text-blue-600 hover:text-blue-700 font-medium"
-            >
-              ← Back to Home
-            </Link>
-          </nav>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Window Cleaning Blog
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Expert tips, maintenance guides, and industry insights to help you
-            make informed decisions about your window cleaning and care needs.
-          </p>
-        </header>
-
-        {/* Categories */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Browse by Category
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {blogCategories.map((category, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors cursor-pointer"
-              >
-                {category}
-              </span>
-            ))}
+    <main className={styles.blogContainer}>
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <Image
+          src="/herobg.jpg"
+          alt="Window Cleaning Expert Blog"
+          fill
+          className={styles.heroImage}
+          priority
+        />
+        <div className={styles.heroOverlay}>
+          <div className={styles.heroContent}>
+            {" "}
+            {/* Navigation */}
+            <nav className={styles.navigation}>
+              <Link href="/" className={styles.backButton}>
+                <svg
+                  className={styles.backIcon}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+                Back to Home
+              </Link>
+            </nav>
+            {/* Hero Content */}
+            <div>
+              <h1 className={styles.heroTitle}>Window Cleaning Expert Blog</h1>
+              <p className={styles.heroSubtitle}>
+                Professional tips, maintenance guides, and industry insights to
+                help you make informed decisions about your window cleaning
+                needs.
+              </p>
+              <div className={styles.heroFeatures}>
+                <div className={styles.featureItem}>
+                  <svg
+                    className={styles.featureIcon}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span>Expert Tips</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg
+                    className={styles.featureIcon}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                  </svg>
+                  <span>Professional Advice</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg
+                    className={styles.featureIcon}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V4.804z" />
+                  </svg>
+                  <span>Industry Insights</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-
-        {/* Blog Posts Grid */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Latest Articles
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
+        </div>
+      </section>{" "}
+      {/* Client-side Search and Filter with Blog Grid */}
+      <SearchAndFilter initialPosts={blogPosts} /> {/* Call to Action */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaContainer}>
+          <div className={styles.ctaCard}>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>
+                Ready for Professional Window Cleaning?
+              </h2>
+              <p className={styles.ctaDescription}>
+                Get expert service from True North Window Washing team. Quality
+                results guaranteed.
+              </p>
+              <div className={styles.ctaButtons}>
+                <Link href="/book-service" className={styles.ctaPrimary}>
+                  <svg
+                    className={styles.ctaIcon}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Book Your Service
+                </Link>
+                <Link href="/contact" className={styles.ctaSecondary}>
+                  <svg
+                    className={styles.ctaIcon}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Get Quote
+                </Link>
+              </div>
+            </div>
           </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready for Professional Window Cleaning?
-          </h2>{" "}
-          <p className="text-xl mb-8 opacity-90">
-            Get expert service from Ali&apos;s Window Washing team
-          </p>
-          <Link
-            href="/book-service"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Book Your Service Today
-          </Link>
-        </section>
-      </div>
-
+        </div>
+      </section>
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -107,32 +173,32 @@ export default function BlogPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            name: "Ali's Window Washing Blog",
+            name: "True North Window Washing Blog",
             description:
               "Expert window cleaning tips, maintenance guides, and industry insights",
             url: `${
               process.env.NEXT_PUBLIC_SITE_URL ||
-              "https://aliswindowwashing.com"
+              "https://truenorthwindowwashing.com"
             }/blog`,
             publisher: {
               "@type": "Organization",
-              name: "Ali's Window Washing",
+              name: "True North Window Washing",
               url:
                 process.env.NEXT_PUBLIC_SITE_URL ||
-                "https://aliswindowwashing.com",
+                "https://truenorthwindowwashing.com",
               logo: {
                 "@type": "ImageObject",
                 url: `${
                   process.env.NEXT_PUBLIC_SITE_URL ||
-                  "https://aliswindowwashing.com"
-                }/logo.png`,
+                  "https://truenorthwindowwashing.com"
+                }/logo.svg`,
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": `${
                 process.env.NEXT_PUBLIC_SITE_URL ||
-                "https://aliswindowwashing.com"
+                "https://truenorthwindowwashing.com"
               }/blog`,
             },
             blogPost: blogPosts.map((post) => ({
@@ -151,17 +217,17 @@ export default function BlogPage() {
                   "@type": "ImageObject",
                   url: `${
                     process.env.NEXT_PUBLIC_SITE_URL ||
-                    "https://aliswindowwashing.com"
-                  }/logo.png`,
+                    "https://truenorthwindowwashing.com"
+                  }/logo.svg`,
                 },
               },
               image: `${
                 process.env.NEXT_PUBLIC_SITE_URL ||
-                "https://aliswindowwashing.com"
+                "https://truenorthwindowwashing.com"
               }${post.schema.image}`,
               url: `${
                 process.env.NEXT_PUBLIC_SITE_URL ||
-                "https://aliswindowwashing.com"
+                "https://truenorthwindowwashing.com"
               }/blog/${post.slug}`,
               wordCount: post.schema.wordCount,
               keywords: post.keywords.join(", "),

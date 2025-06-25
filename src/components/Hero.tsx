@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
             commercial properties. Crystal clear results with professional
             equipment and eco-friendly solutions.
           </p>
-          <button
+          <a
             className={styles.ctaButton}
-            type="button"
-            aria-label="Request a free window cleaning demo"
+            href="tel:+14312934714"
+            aria-label="Call True North Window Washing at +1 (431) 293-4714"
           >
-            REQUEST A FREE DEMO →
-          </button>
+            CALL US NOW: →
+          </a>
         </div>
       </div>
       <div

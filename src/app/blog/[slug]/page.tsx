@@ -4,6 +4,18 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogdata";
 import type { Metadata } from "next";
+import styles from "./page.module.css";
+import {
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -22,28 +34,64 @@ export async function generateMetadata({
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
-
   if (!post) {
     return {
-      title: "Blog Post Not Found",
+      title: "Blog Post Not Found | True North Window Washing",
+      description:
+        "The requested blog post could not be found. Browse our other window cleaning tips and guides.",
     };
   }
 
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://truenorthwindowwashing.com";
+
   return {
-    title: `${post.title} | Ali's Window Washing Blog`,
+    title: `${post.title} | True North Window Washing Blog`,
     description: post.metaDescription,
     keywords: post.keywords,
+    authors: [{ name: post.author }],
+    creator: post.author,
+    publisher: "True North Window Washing",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.publishedDate,
+      modifiedTime: post.schema.dateModified,
       authors: [post.author],
-      images: [post.featuredImage],
+      images: [
+        {
+          url: `${baseUrl}${post.featuredImage}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      siteName: "True North Window Washing",
+      locale: "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`${baseUrl}${post.featuredImage}`],
+      creator: "@truenorthwindowwashing",
     },
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `${baseUrl}/blog/${post.slug}`,
     },
+    category: post.category,
   };
 }
 
@@ -55,109 +103,175 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  // Get other blog posts for "Related Posts" section
+  const relatedPosts = blogPosts.filter((p) => p.id !== post.id).slice(0, 2); // Social sharing data
+  const shareUrl = encodeURIComponent(
+    `${
+      process.env.NEXT_PUBLIC_SITE_URL || "https://truenorthwindowwashing.com"
+    }/blog/${post.slug}`
+  );
+  const shareTitle = encodeURIComponent(post.title);
+  const shareDescription = encodeURIComponent(post.excerpt);
+
+  const socialLinks = [
+    {
+      name: "Facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${shareTitle}`,
+      icon: Facebook,
+      className: "facebook",
+    },
+    {
+      name: "Twitter",
+      href: `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}&via=truenorthwindowwashing`,
+      icon: Twitter,
+      className: "twitter",
+    },
+    {
+      name: "LinkedIn",
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}&title=${shareTitle}&summary=${shareDescription}`,
+      icon: Linkedin,
+      className: "linkedin",
+    },
+    {
+      name: "Email",
+      href: `mailto:?subject=${shareTitle}&body=I thought you might be interested in this article:%0A%0A${shareTitle}%0A${shareDescription}%0A%0ARead more: ${shareUrl}`,
+      icon: Mail,
+      className: "email",
+    },
+    {
+      name: "WhatsApp",
+      href: `https://wa.me/?text=${shareTitle}%0A${shareUrl}`,
+      icon: MessageCircle,
+      className: "whatsapp",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 py-16">
-        {/* Navigation */}
-        <nav className="mb-8">
-          <Link
-            href="/blog"
-            className="text-blue-600 hover:text-blue-700 font-medium"
-          >
-            ← Back to Blog
-          </Link>
-        </nav>
-
-        {/* Header */}
-        <header className="mb-12">
-          <div className="mb-6">
-            <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
-              {post.category}
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            {post.title}
-          </h1>
-
-          <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
-            <div className="flex items-center gap-2">
-              <span>By {post.author}</span>
-            </div>
-            <time dateTime={post.publishedDate}>
-              {new Date(post.publishedDate).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-            <span>{post.readTime}</span>
-          </div>
-
-          <div className="relative w-full h-96 mb-8 rounded-xl overflow-hidden">
-            <Image
-              src={post.featuredImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <p className="text-xl text-gray-700 leading-relaxed">
-            {post.excerpt}
-          </p>
-        </header>
-
-        {/* Content */}
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+    <div className={styles.blogContainer}>
+      {" "}
+      {/* Hero Section with Image and Title Overlay */}
+      <header className={styles.heroSection}>
+        <Image
+          src={post.featuredImage}
+          alt={post.title}
+          fill
+          className={styles.heroImage}
+          priority
         />
+        <div className={styles.heroOverlay}>
+          <div className={styles.heroContent}>
+            {/* Back Button */}
+            <nav className={styles.navigation}>
+              <Link href="/blog" className={styles.backButton}>
+                <ArrowLeft className={styles.backIcon} />
+                Back to Blog
+              </Link>
+            </nav>
 
-        {/* Tags */}
-        <footer className="mt-12 pt-8 border-t border-gray-200">
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Tags:</h3>
-            <div className="flex flex-wrap gap-2">
+            <nav aria-label="Article category">
+              <span className={styles.category}>{post.category}</span>
+            </nav>
+            <h1 className={styles.title}>{post.title}</h1>
+            <div className={styles.blogMeta} role="contentinfo">
+              <div className={styles.metaItem}>
+                <User className={styles.metaIcon} aria-hidden="true" />
+                <span>By {post.author}</span>
+              </div>
+              <div className={styles.metaItem}>
+                <Calendar className={styles.metaIcon} aria-hidden="true" />
+                <time dateTime={post.publishedDate}>
+                  {new Date(post.publishedDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
+              <div className={styles.metaItem}>
+                <Clock className={styles.metaIcon} aria-hidden="true" />
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      {/* Content Section */}
+      <section className={styles.contentSection}>
+        {/* Blog Content */}
+        <div
+          className={styles.blogContent}
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />{" "}
+        {/* Tags and Social Sharing Section */}
+        <div className={styles.tagsAndSharingSection}>
+          {/* Tags Row */}
+          <div className={styles.tagsRow}>
+            <h3 className={styles.tagsTitle}>Tags:</h3>
+            <div className={styles.tagsList}>
               {post.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >
+                <span key={index} className={styles.tag}>
                   {tag}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Need Professional Window Cleaning?
-            </h3>{" "}
-            <p className="text-lg mb-6 opacity-90">
-              Get expert advice and professional service from Ali&apos;s Window
-              Washing
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/book-service"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Book Service Now
-              </Link>
-              <Link
-                href="/blog"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Read More Articles
-              </Link>
+          {/* Social Sharing Row */}
+          <div className={styles.sharingRow}>
+            <h3 className={styles.sharingTitle}>Share:</h3>
+            <div className={styles.socialIcons}>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className={styles.socialLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Share on ${social.name}`}
+                >
+                  <social.icon className={styles.socialIcon} />
+                </a>
+              ))}
             </div>
           </div>
-        </footer>
-      </article>
-
+        </div>
+        {/* Related Posts */}
+        <div className={styles.relatedGrid}>
+          {relatedPosts.map((relatedPost) => (
+            <Link
+              key={relatedPost.id}
+              href={`/blog/${relatedPost.slug}`}
+              className={styles.relatedCard}
+            >
+              <div className={styles.relatedImageContainer}>
+                <Image
+                  src={relatedPost.featuredImage}
+                  alt={relatedPost.title}
+                  width={120}
+                  height={90}
+                  className={styles.relatedImage}
+                />
+              </div>
+              <div className={styles.relatedContent}>
+                <h3 className={styles.relatedCardTitle}>{relatedPost.title}</h3>
+                <div className={styles.relatedDate}>
+                  <Calendar className={styles.calendarIcon} />
+                  <time dateTime={relatedPost.publishedDate}>
+                    {new Date(relatedPost.publishedDate).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                      }
+                    )}
+                  </time>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>{" "}
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -169,8 +283,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             datePublished: post.schema.datePublished,
             dateModified: post.schema.dateModified,
             author: {
-              "@type": "Organization",
+              "@type": "Person",
               name: post.schema.author,
+              url: `${
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                "https://truenorthwindowwashing.com"
+              }/about`,
             },
             publisher: {
               "@type": "Organization",
@@ -179,32 +297,82 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 "@type": "ImageObject",
                 url: `${
                   process.env.NEXT_PUBLIC_SITE_URL ||
-                  "https://aliswindowwashing.com"
-                }/logo.png`,
+                  "https://truenorthwindowwashing.com"
+                }/logo.svg`,
+                width: 60,
+                height: 60,
               },
+              url:
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                "https://truenorthwindowwashing.com",
             },
-            image: `${
-              process.env.NEXT_PUBLIC_SITE_URL ||
-              "https://aliswindowwashing.com"
-            }${post.schema.image}`,
+            image: {
+              "@type": "ImageObject",
+              url: `${
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                "https://truenorthwindowwashing.com"
+              }${post.schema.image}`,
+              width: 1200,
+              height: 630,
+            },
             url: `${
               process.env.NEXT_PUBLIC_SITE_URL ||
-              "https://aliswindowwashing.com"
+              "https://truenorthwindowwashing.com"
             }/blog/${post.slug}`,
             wordCount: post.schema.wordCount,
             keywords: post.keywords.join(", "),
             articleSection: post.category,
             description: post.metaDescription,
+            inLanguage: "en-US",
+            isPartOf: {
+              "@type": "Blog",
+              name: "True North Window Washing Blog",
+              url: `${
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                "https://truenorthwindowwashing.com"
+              }/blog`,
+            },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": `${
                 process.env.NEXT_PUBLIC_SITE_URL ||
-                "https://aliswindowwashing.com"
+                "https://truenorthwindowwashing.com"
               }/blog/${post.slug}`,
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item:
+                    process.env.NEXT_PUBLIC_SITE_URL ||
+                    "https://truenorthwindowwashing.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Blog",
+                  item: `${
+                    process.env.NEXT_PUBLIC_SITE_URL ||
+                    "https://truenorthwindowwashing.com"
+                  }/blog`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: post.title,
+                  item: `${
+                    process.env.NEXT_PUBLIC_SITE_URL ||
+                    "https://truenorthwindowwashing.com"
+                  }/blog/${post.slug}`,
+                },
+              ],
             },
           }),
         }}
       />
-    </main>
+    </div>
   );
 }
