@@ -109,25 +109,24 @@ export default function PriceEstimator() {
       // 3. Replace 'YOUR_FORM_ID' below with your actual form ID
       // 4. Uncomment the fetch block below and comment out the simulation
 
-      // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
-      //
-      // if (response.ok) {
-      //   setIsSubmitting(false);
-      //   setShowSuccess(true);
-      //   // Reload page after showing success message for 3 seconds
-      //   setTimeout(() => {
-      //     window.location.reload();
-      //   }, 3000);
-      // } else {
-      //   throw new Error('Form submission failed');
-      // }
-      // ===============================================
+      const response = await fetch("https://formspree.io/f/xnnvljke", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitting(false);
+        setShowSuccess(true);
+        // Reload page after showing success message for 3 seconds
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      } else {
+        throw new Error("Form submission failed");
+      }
 
       // Simulate API call for now (REMOVE THIS WHEN USING FORMSPREE)
       setTimeout(() => {

@@ -5,9 +5,9 @@ import { blogPosts } from "@/data/blogdata";
 import styles from "./Blog.module.css";
 
 const Blog: React.FC = () => {
-  // Show only 2 specific blog posts on the homepage
+  // Show 3 specific blog posts on the homepage
   const featuredPosts = blogPosts.filter(
-    (post) => post.id === "1" || post.id === "4"
+    (post) => post.id === "1" || post.id === "2" || post.id === "4"
   );
 
   return (

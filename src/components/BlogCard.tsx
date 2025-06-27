@@ -21,9 +21,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
             src={post.featuredImage}
             alt={post.title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
             className={styles.featuredImage}
             itemProp="image"
+            priority={false}
           />
           <div className={styles.categoryBadge}>
             <span itemProp="articleSection">{post.category}</span>
