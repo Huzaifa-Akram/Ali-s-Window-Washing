@@ -8,7 +8,7 @@ const Navbar = () => {
   // Static navigation items - better for SEO as they're server-side rendered
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/#services" },
+    { name: "Services", href: "/services" },
     { name: "About", href: "/#about" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/#contact" },

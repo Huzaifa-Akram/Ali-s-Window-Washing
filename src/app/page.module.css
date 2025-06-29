@@ -161,7 +161,6 @@
 .servicesSection {
   position: relative;
   z-index: 1;
-  padding: var(--section-padding-y, 5rem) 0;
 }
 
 /* Price Estimator Section */
