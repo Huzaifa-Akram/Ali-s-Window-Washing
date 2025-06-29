@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     images: ["/herobg.jpg"],
   },
   verification: {
-    google: "your-google-verification-code-here", // Add your actual verification code
+    google: "AN2OPa2VqBJVyj3ZkQDx26KP93CvE7nPQGAfL4og_c0", // Add your actual verification code
   },
 };
 
