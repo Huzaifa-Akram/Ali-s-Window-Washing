@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ServiceCard from "./ServiceCard";
 import styles from "./Services.module.css";
 
@@ -27,13 +28,13 @@ function Services() {
                 cleaning to regular maintenance plans - we deliver spotless,
                 streak-free windows every time.
               </p>
-              <button
+              <Link
+                href="/services"
                 className={styles.moreServicesButton}
                 aria-label="View more window cleaning services"
-                type="button"
               >
                 More Services
-              </button>
+              </Link>
             </div>
           </div>
         </header>
