@@ -26,13 +26,13 @@ const Navbar = () => {
             <Link
               href="/"
               className={styles.logoContent}
-              aria-label="True North Window Washing - Go to homepage"
-              title="True North Window Washing - Professional Window Cleaning Services"
+              aria-label="Northern Shiekh Window Washing - Go to homepage"
+              title="Northern Shiekh Window Washing - Professional Window Cleaning Services"
             >
               <div className={styles.logoIcon}>
                 <Image
                   src="/logo.svg"
-                  alt="True North Window Washing Professional Cleaning Services"
+                  alt="Northern Shiekh Window Washing Professional Cleaning Services"
                   width={50}
                   height={50}
                   className={styles.logoImage}
@@ -40,7 +40,7 @@ const Navbar = () => {
                 />
               </div>
               <div className={styles.logoText}>
-                <span className={styles.companyName}>True North</span>
+                <span className={styles.companyName}>Northern Shiekh</span>
                 <span className={styles.serviceType}>Window Washing</span>
               </div>
             </Link>

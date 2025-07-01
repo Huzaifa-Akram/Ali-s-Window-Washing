@@ -6,12 +6,12 @@ const Hero: React.FC = () => {
     <section
       className={styles.hero}
       role="banner"
-      aria-label="Hero section for True North Window Washing Services"
+      aria-label="Hero section for Northern Shiekh Window Washing Services"
     >
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
           <p className={styles.subtitle}>
-            INTRODUCING TRUE NORTH WINDOW WASHING
+            INTRODUCING NORTHERN SHIEKH WINDOW WASHING
           </p>
           <h1 className={styles.title}>
             Professional Window Cleaning Services for{" "}
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           <a
             className={styles.ctaButton}
             href="tel:+14312934714"
-            aria-label="Call True North Window Washing at +1 (431) 293-4714"
+            aria-label="Call Northern Shiekh Window Washing at +1 (431) 293-4714"
           >
             CALL US NOW: →
           </a>
