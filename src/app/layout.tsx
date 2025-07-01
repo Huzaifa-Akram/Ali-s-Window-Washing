@@ -6,14 +6,14 @@ import ScrollToHash from "@/components/ScrollToHash";
 
 export const metadata: Metadata = {
   title:
-    "True North Window Washing - Professional Window Cleaning Services Near You",
+    "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
   description:
     "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes with our online estimator.",
   keywords:
     "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning, free window cleaning quote, instant estimate, eavestrough cleaning",
-  authors: [{ name: "True North Window Washing" }],
-  creator: "True North Window Washing",
-  publisher: "True North Window Washing",
+  authors: [{ name: "Northern Shiekh Window Washing" }],
+  creator: "Northern Shiekh Window Washing",
+  publisher: "Northern Shiekh Window Washing",
   category: "Home Services",
   robots: {
     index: true,
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     title:
-      "True North Window Washing - Professional Window Cleaning Services Near You",
+      "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
     description:
       "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
-    siteName: "True North Window Washing",
+    siteName: "Northern Shiekh Window Washing",
     images: [
       {
         url: "/herobg.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "True North Window Washing - Professional Window Cleaning Services Near You",
+      "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
     description:
       "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
     images: ["/herobg.jpg"],
@@ -64,7 +64,7 @@ export default function RootLayout({
   const jsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "True North Window Washing",
+    name: "Northern Shiekh Window Washing",
     description:
       "Professional window cleaning services for residential and commercial properties with instant online quotes",
     url: "https://truenorthwindowwashing.com",
