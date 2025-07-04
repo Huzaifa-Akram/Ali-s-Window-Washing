@@ -11,28 +11,62 @@ const AboutUs: React.FC = () => {
             <div className={styles.headerSection}>
               <p className={styles.subtitle}>ABOUT DOMINION WINDOW SHINE</p>
               <h2 className={styles.title}>
-                Canada&apos;s Premier
+                Manitoba&apos;s Most
                 <br />
-                <span className={styles.highlight}>Eco-Friendly</span> Window
-                Cleaning Service
+                <span className={styles.highlight}>Affordable</span> Window
+                Cleaning Experts
               </h2>
             </div>
             <div className={styles.description}>
-              {" "}
               <p className={styles.intro}>
-                Welcome to Dominion Window Shine, proudly serving communities
-                across Canada with crystal-clear results and environmental
-                responsibility at our core.
+                At Dominion Window Shine, we believe every window deserves to
+                shine like new—without breaking the bank. Founded right here in
+                Manitoba, we&apos;re proud to offer the most competitive window
+                cleaning rates in town.
               </p>
               <p className={styles.story}>
-                Founded with a passion for excellence and trained by
-                industry-leading professionals, we&apos;ve revolutionized
-                traditional window cleaning with our innovative approach. Our
-                commitment to quality and sustainability sets us apart in the
-                Canadian market.
+                Low prices don&apos;t mean cutting corners. We use advanced
+                reverse osmosis and deionized water technology, ensuring
+                crystal-clear, streak-free results—with no soaps, no chemicals,
+                and no residue left behind.
+              </p>
+              <p className={styles.story}>
+                Every home or business we clean gets our full attention and
+                care, because we treat your property like it&apos;s our own.
+                Whether it&apos;s a bungalow, storefront, or multi-story home,
+                we take pride in delivering spotless results every single time.
+              </p>
+            </div>
+            <div className={styles.closingStatement}>
+              <p className={styles.closingText}>
+                Let Dominion Window Shine bring natural light back into your
+                space—with eco-friendly methods, honest service, and unbeatable
+                value.
               </p>
             </div>
             <div className={styles.featuresGrid}>
+              <div className={styles.feature}>
+                <div className={styles.iconWrapper}>
+                  <svg
+                    className={styles.icon}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m-3-6h6"
+                    />
+                  </svg>
+                </div>
+                <div className={styles.featureContent}>
+                  <h3>Most Affordable Rates</h3>
+                  <p>Best prices in town, guaranteed</p>
+                </div>
+              </div>
+
               <div className={styles.feature}>
                 <div className={styles.iconWrapper}>
                   <svg
@@ -50,8 +84,8 @@ const AboutUs: React.FC = () => {
                   </svg>
                 </div>
                 <div className={styles.featureContent}>
-                  <h3>4-Stage Filtration System</h3>
-                  <p>Pure water technology for streak-free, spotless results</p>
+                  <h3>Reverse Osmosis Technology</h3>
+                  <p>Pure water for spotless windows</p>
                 </div>
               </div>
 
@@ -73,10 +107,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className={styles.featureContent}>
                   <h3>100% Eco-Friendly</h3>
-                  <p>
-                    No harmful chemicals or soaps - safe for your family and
-                    environment
-                  </p>
+                  <p>No chemicals, just pure water</p>
                 </div>
               </div>
 
@@ -92,43 +123,13 @@ const AboutUs: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
                     />
                   </svg>
                 </div>
                 <div className={styles.featureContent}>
-                  <h3>Professional Excellence</h3>
-                  <p>
-                    Trained by top industry experts with cutting-edge techniques
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.feature}>
-                <div className={styles.iconWrapper}>
-                  <svg
-                    className={styles.icon}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div className={styles.featureContent}>
-                  <h3>Proudly Canadian</h3>
-                  <p>Local expertise serving communities across Canada</p>
+                  <h3>Satisfaction Guaranteed</h3>
+                  <p>Not happy? We'll make it right</p>
                 </div>
               </div>
             </div>
