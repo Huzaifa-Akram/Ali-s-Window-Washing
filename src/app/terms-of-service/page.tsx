@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import styles from "../page.module.css";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - True North Window Washing",
+  title: "Terms of Service - Dominion Window Shine",
   description:
-    "Terms of service for True North Window Washing. Review our service terms and conditions.",
+    "Terms of service for Dominion Window Shine. Review our service terms and conditions.",
   robots: { index: true, follow: true },
 };
 
@@ -34,8 +34,8 @@ export default function TermsOfService() {
           </h2>
           <p>
             By booking our window cleaning services, you agree to these terms of
-            service. True North Window Washing provides professional window
-            cleaning services for residential and commercial properties.
+            service. Dominion Window Shine provides professional window cleaning
+            services for residential and commercial properties.
           </p>
 
           <h2
@@ -80,7 +80,7 @@ export default function TermsOfService() {
             Insurance and Liability
           </h2>
           <p>
-            True North Window Washing is fully licensed and insured. We carry
+            Dominion Window Shine is fully licensed and insured. We carry
             comprehensive liability insurance to protect our customers and their
             property. Our insurance covers any damage that may occur during the
             normal course of our work.

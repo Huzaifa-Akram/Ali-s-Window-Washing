@@ -6,13 +6,11 @@ const Hero: React.FC = () => {
     <section
       className={styles.hero}
       role="banner"
-      aria-label="Hero section for Northern Shiekh Window Washing Services"
+      aria-label="Hero section for Dominion Window Shine Services"
     >
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
-          <p className={styles.subtitle}>
-            INTRODUCING NORTHERN SHIEKH WINDOW WASHING
-          </p>
+          <p className={styles.subtitle}>INTRODUCING DOMINION WINDOW SHINE</p>
           <h1 className={styles.title}>
             Professional Window Cleaning Services for{" "}
             <span className={styles.highlight}>Home & Office</span> in Your Area
@@ -25,7 +23,7 @@ const Hero: React.FC = () => {
           <a
             className={styles.ctaButton}
             href="tel:+14312934714"
-            aria-label="Call Northern Shiekh Window Washing at +1 (431) 293-4714"
+            aria-label="Call Dominion Window Shine at +1 (431) 293-4714"
           >
             CALL US NOW: →
           </a>

@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import styles from "../page.module.css";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - True North Window Washing",
+  title: "Privacy Policy - Dominion Window Shine",
   description:
-    "Privacy policy for True North Window Washing services. Learn how we protect and handle your personal information.",
+    "Privacy policy for Dominion Window Shine services. Learn how we protect and handle your personal information.",
   robots: { index: true, follow: true },
 };
 

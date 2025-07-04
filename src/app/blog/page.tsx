@@ -7,8 +7,7 @@ import styles from "./page.module.css";
 import SearchAndFilter from "@/components/SearchAndFilter";
 
 export const metadata: Metadata = {
-  title:
-    "Window Cleaning Blog | Expert Tips & Guides | True North Window Washing",
+  title: "Window Cleaning Blog | Expert Tips & Guides | Dominion Window Shine",
   description:
     "Expert window cleaning tips, maintenance guides, cost-saving strategies, and industry insights. Professional advice for residential and commercial window care.",
   keywords: [
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Window Cleaning Blog | Expert Tips & Guides",
     description:
-      "Expert window cleaning tips, maintenance guides, and industry insights from True North Window Washing professionals.",
+      "Expert window cleaning tips, maintenance guides, and industry insights from Dominion Window Shine professionals.",
     type: "website",
     images: ["/service1.jpg"],
   },
@@ -125,7 +124,7 @@ export default function BlogPage() {
                 Ready for Professional Window Cleaning?
               </h2>
               <p className={styles.ctaDescription}>
-                Get expert service from True North Window Washing team. Quality
+                Get expert service from Dominion Window Shine team. Quality
                 results guaranteed.
               </p>
               <div className={styles.ctaButtons}>
@@ -173,7 +172,7 @@ export default function BlogPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            name: "True North Window Washing Blog",
+            name: "Dominion Window Shine Blog",
             description:
               "Expert window cleaning tips, maintenance guides, and industry insights",
             url: `${
@@ -182,7 +181,7 @@ export default function BlogPage() {
             }/blog`,
             publisher: {
               "@type": "Organization",
-              name: "True North Window Washing",
+              name: "Dominion Window Shine",
               url:
                 process.env.NEXT_PUBLIC_SITE_URL ||
                 "https://truenorthwindowwashing.com",

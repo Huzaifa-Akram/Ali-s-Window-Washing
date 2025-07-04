@@ -50,10 +50,8 @@ const NavbarClient: React.FC<NavbarClientProps> = ({ navItems }) => {
           >
             <div className={styles.mobileMenuHeader}>
               <div className={styles.mobileLogoText}>
-                <span className={styles.mobileCompanyName}>
-                  Northern Shiekh
-                </span>
-                <span className={styles.mobileServiceType}>Window Washing</span>
+                <span className={styles.mobileCompanyName}>Dominion</span>
+                <span className={styles.mobileServiceType}>Window Shine</span>
               </div>
             </div>
             <div className={styles.mobileNavItems}>

@@ -36,7 +36,7 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) {
     return {
-      title: "Blog Post Not Found | True North Window Washing",
+      title: "Blog Post Not Found | Dominion Window Shine",
       description:
         "The requested blog post could not be found. Browse our other window cleaning tips and guides.",
     };
@@ -46,12 +46,12 @@ export async function generateMetadata({
     process.env.NEXT_PUBLIC_SITE_URL || "https://truenorthwindowwashing.com";
 
   return {
-    title: `${post.title} | True North Window Washing Blog`,
+    title: `${post.title} | Dominion Window Shine Blog`,
     description: post.metaDescription,
     keywords: post.keywords,
     authors: [{ name: post.author }],
     creator: post.author,
-    publisher: "True North Window Washing",
+    publisher: "Dominion Window Shine",
     robots: {
       index: true,
       follow: true,
@@ -78,7 +78,7 @@ export async function generateMetadata({
           alt: post.title,
         },
       ],
-      siteName: "True North Window Washing",
+      siteName: "Dominion Window Shine",
       locale: "en_US",
     },
     twitter: {
@@ -326,7 +326,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             inLanguage: "en-US",
             isPartOf: {
               "@type": "Blog",
-              name: "True North Window Washing Blog",
+              name: "Dominion Window Shine Blog",
               url: `${
                 process.env.NEXT_PUBLIC_SITE_URL ||
                 "https://truenorthwindowwashing.com"

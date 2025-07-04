@@ -4,7 +4,7 @@ import { getAllServices } from "@/data/servicedata";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Our Services - True North Window Washing",
+  title: "Our Services - Dominion Window Shine",
   description:
     "Discover our comprehensive window cleaning services including residential, commercial, and maintenance packages. Professional, reliable, and affordable window cleaning solutions.",
   keywords:

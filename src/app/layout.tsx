@@ -6,14 +6,14 @@ import ScrollToHash from "@/components/ScrollToHash";
 
 export const metadata: Metadata = {
   title:
-    "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
+    "Dominion Window Shine - Professional Window Cleaning Services in Manitoba",
   description:
-    "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes with our online estimator.",
+    "Expert window cleaning services for homes and businesses in Manitoba. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes with our online estimator.",
   keywords:
-    "window cleaning near me, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning, free window cleaning quote, instant estimate, eavestrough cleaning",
-  authors: [{ name: "Northern Shiekh Window Washing" }],
-  creator: "Northern Shiekh Window Washing",
-  publisher: "Northern Shiekh Window Washing",
+    "window cleaning Manitoba, professional window washing, residential window cleaning, commercial window cleaning, window cleaning service, window washing company, eco-friendly window cleaning, free window cleaning quote, instant estimate, eavestrough cleaning",
+  authors: [{ name: "Dominion Window Shine" }],
+  creator: "Dominion Window Shine",
+  publisher: "Dominion Window Shine",
   category: "Home Services",
   robots: {
     index: true,
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     title:
-      "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
+      "Dominion Window Shine - Professional Window Cleaning Services in Manitoba",
     description:
-      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
-    siteName: "Northern Shiekh Window Washing",
+      "Expert window cleaning services for homes and businesses in Manitoba. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
+    siteName: "Dominion Window Shine",
     images: [
       {
         url: "/herobg.jpg",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Northern Shiekh Window Washing - Professional Window Cleaning Services Near You",
+      "Dominion Window Shine - Professional Window Cleaning Services in Manitoba",
     description:
-      "Expert window cleaning services for homes and businesses. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
+      "Expert window cleaning services for homes and businesses in Manitoba. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
     images: ["/herobg.jpg"],
   },
   verification: {
@@ -64,14 +64,14 @@ export default function RootLayout({
   const jsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Northern Shiekh Window Washing",
+    name: "Dominion Window Shine",
     description:
       "Professional window cleaning services for residential and commercial properties with instant online quotes",
-    url: "https://truenorthwindowwashing.com",
+    url: "https://dominionwindowshine.ca",
     serviceType: "Window Cleaning Service",
     areaServed: {
       "@type": "City",
-      name: "Local Area",
+      name: "Manitoba",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -126,7 +126,7 @@ export default function RootLayout({
       "@type": "ContactPoint",
       telephone: "+1-204-414-0944",
       contactType: "customer service",
-      email: "info@pictureperfectwc.ca",
+      email: "info@dominionwindowshine.ca",
     },
     aggregateRating: {
       "@type": "AggregateRating",

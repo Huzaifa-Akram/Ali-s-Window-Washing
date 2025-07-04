@@ -86,14 +86,14 @@ const Footer: React.FC = () => {
                 <div className={styles.logoContainer}>
                   <Image
                     src="/logo.svg"
-                    alt="True North Window Washing Professional Cleaning Services"
+                    alt="Dominion Window Shine Professional Cleaning Services"
                     width={60}
                     height={60}
                     className={styles.logoImage}
                   />
                   <div className={styles.logoText}>
-                    <span className={styles.companyName}>True North</span>
-                    <span className={styles.serviceType}>Window Washing</span>
+                    <span className={styles.companyName}>Dominion</span>
+                    <span className={styles.serviceType}>Window Shine</span>
                   </div>
                 </div>
               </div>
@@ -239,9 +239,7 @@ const Footer: React.FC = () => {
         <div className={`container ${styles.footerContainer}`}>
           <div className={styles.bottomContent}>
             <div className={styles.copyright}>
-              <p>
-                © {currentYear} True North Window Washing. All rights reserved.
-              </p>
+              <p>© {currentYear} Dominion Window Shine. All rights reserved.</p>
             </div>
             <div className={styles.legalLinks}>
               <Link href="/privacy-policy" className={styles.legalLink}>
