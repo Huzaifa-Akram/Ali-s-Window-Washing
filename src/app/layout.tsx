@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     siteName: "Dominion Window Shine",
     images: [
       {
-        url: "/herobg.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Professional window cleaning service in action",
+        alt: "Dominion Window Shine Logo",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Dominion Window Shine - Professional Window Cleaning Services in Manitoba",
     description:
       "Expert window cleaning services for homes and businesses in Manitoba. Professional, reliable, and eco-friendly window washing with crystal clear results. Get instant quotes online.",
-    images: ["/herobg.jpg"],
+    images: ["/og-image.png"],
   },
   verification: {
     google: "AN2OPa2VqBJVyj3ZkQDx26KP93CvE7nPQGAfL4og_c0", // Add your actual verification code
@@ -138,6 +138,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon Setup */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
