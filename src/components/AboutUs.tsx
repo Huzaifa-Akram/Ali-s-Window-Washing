@@ -134,7 +134,7 @@ const AboutUs: React.FC = () => {
               </div>
             </div>
             <div className={styles.ctaSection}>
-              <a href="#contact" className={styles.primaryButton}>
+              <a href="#price-estimator" className={styles.primaryButton}>
                 Get Free Quote
               </a>
               <a href="#services" className={styles.secondaryButton}>

@@ -376,214 +376,334 @@
 }
 
 .quoteText {
-  /* Animations */
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #475569;
+  margin: 0;
+  line-height: 1.6;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 130, 247, 0.05),
+    rgba(90, 117, 245, 0.05)
+  );
+  border-radius: 8px;
+  border-left: 4px solid #6382f7;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 var(--container-padding-desktop, 1.5rem);
   }
 
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .contentWrapper {
+    gap: 3rem;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  .imageSection {
+    order: -1;
   }
 
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .contentWrapper {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .imageSection {
-      order: -1;
-    }
-
-    .imageContainer {
-      max-width: 300px;
-      height: 300px;
-    }
-
-    .floatingCard:first-child {
-      top: 10%;
-      right: -5%;
-    }
-
-    .floatingCard:last-child {
-      bottom: 10%;
-      left: -5%;
-    }
+  .imageContainer {
+    max-width: 350px;
+    height: 350px;
   }
 
-  @media (max-width: 768px) {
-    .aboutSection {
-      padding: var(--section-padding-y-mobile, 4rem) 0;
-    }
-
-    .container {
-      padding: 0 var(--container-padding-tablet, 1.5rem);
-    }
-
-    .title {
-      font-size: 2.25rem;
-    }
-
-    .featuresGrid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .feature {
-      padding: 0.875rem;
-    }
-
-    .quote {
-      margin: 1.5rem 0 1rem 0;
-      padding: 0 0.5rem;
-    }
-
-    .quoteText {
-      font-size: 1rem;
-      padding: 0.875rem 1.5rem;
-    }
-
-    .ctaSection {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .closingStatement {
-      margin: 2rem 0 1.5rem 0;
-      padding: 1.25rem;
-    }
-
-    .closingText {
-      font-size: 1rem;
-    }
-
-    .primaryButton,
-    .secondaryButton {
-      text-align: center;
-      justify-content: center;
-    }
-
-    .imageContainer {
-      max-width: 280px;
-      height: 280px;
-    }
-
-    .floatingCard {
-      padding: 0.75rem 1rem;
-      gap: 0.5rem;
-    }
-
-    .cardIcon {
-      width: 32px;
-      height: 32px;
-    }
-
-    .cardIcon svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .cardTitle {
-      font-size: 0.8rem;
-    }
-
-    .cardSubtitle {
-      font-size: 0.7rem;
-    }
+  .floatingCard:first-child {
+    top: 10%;
+    right: -5%;
   }
 
-  @media (max-width: 480px) {
-    .container {
-      padding: 0 var(--container-padding-mobile, 1rem);
-    }
+  .floatingCard:last-child {
+    bottom: 10%;
+    left: -5%;
+  }
 
-    .title {
-      font-size: 1.875rem;
-    }
+  .title {
+    font-size: 2.5rem;
+  }
 
-    .subtitle {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-    }
+  .featuresGrid {
+    gap: 1.25rem;
+  }
+}
 
-    .intro {
-      font-size: 1rem;
-    }
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: var(--section-padding-y-mobile, 3rem) 0;
+  }
 
-    .story {
-      font-size: 0.9rem;
-    }
+  .container {
+    padding: 0 var(--container-padding-tablet, 1.5rem);
+  }
 
-    .quote {
-      margin: 1.25rem 0 0.75rem 0;
-      padding: 0;
-    }
+  .title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
 
-    .quoteText {
-      font-size: 0.95rem;
-      padding: 0.75rem 1.25rem;
-      line-height: 1.5;
-    }
+  .subtitle {
+    font-size: 0.875rem;
+    letter-spacing: 2.5px;
+  }
 
-    .closingStatement {
-      margin: 1.5rem 0 1rem 0;
-      padding: 1rem;
-    }
+  .intro {
+    font-size: 1.1rem;
+  }
 
-    .closingText {
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+  .story {
+    font-size: 1rem;
+  }
 
-    .imageContainer {
-      max-width: 250px;
-      height: 250px;
-    }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-    .floatingCard:first-child {
-      right: 0;
-      top: 5%;
-    }
+  .feature {
+    padding: 1rem;
+    min-height: 80px;
+  }
 
-    .floatingCard:last-child {
-      left: 0;
-      bottom: 5%;
-    }
+  .featureContent h3 {
+    font-size: 1rem;
+  }
+
+  .featureContent p {
+    font-size: 0.875rem;
+  }
+
+  .quote {
+    margin: 1.5rem 0 1rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .quoteText {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .ctaSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .closingStatement {
+    margin: 2rem 0 1.5rem 0;
+    padding: 1.25rem;
+  }
+
+  .closingText {
+    font-size: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .floatingCard {
+    padding: 0.875rem 1rem;
+    gap: 0.625rem;
+  }
+
+  .cardIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cardTitle {
+    font-size: 0.875rem;
+  }
+
+  .cardSubtitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: var(--section-padding-y-mobile, 2.5rem) 0;
+  }
+
+  .container {
+    padding: 0 var(--container-padding-mobile, 1rem);
+  }
+
+  .title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .intro {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .story {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .featuresGrid {
+    gap: 0.875rem;
+  }
+
+  .feature {
+    padding: 0.875rem;
+    min-height: 70px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.9rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8rem;
+  }
+
+  .quote {
+    margin: 1.25rem 0 0.75rem 0;
+    padding: 0;
+  }
+
+  .quoteText {
+    font-size: 0.9rem;
+    padding: 0.875rem 1.25rem;
+    line-height: 1.5;
+  }
+
+  .closingStatement {
+    margin: 1.5rem 0 1rem 0;
+    padding: 1rem;
+  }
+
+  .closingText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .ctaSection {
+    gap: 0.5rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .imageContainer {
+    max-width: 260px;
+    height: 260px;
+  }
+
+  .floatingCard {
+    padding: 0.75rem 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .floatingCard:first-child {
+    right: 0;
+    top: 5%;
+  }
+
+  .floatingCard:last-child {
+    left: 0;
+    bottom: 5%;
+  }
+
+  .cardIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cardIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cardTitle {
+    font-size: 0.8rem;
+  }
+
+  .cardSubtitle {
+    font-size: 0.7rem;
   }
 }
