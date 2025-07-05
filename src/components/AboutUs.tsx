@@ -129,7 +129,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className={styles.featureContent}>
                   <h3>Satisfaction Guaranteed</h3>
-                  <p>Not happy? We'll make it right</p>
+                  <p>Not happy? We&apos;ll make it right</p>
                 </div>
               </div>
             </div>
