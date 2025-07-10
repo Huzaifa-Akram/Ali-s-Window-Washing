@@ -133,6 +133,32 @@ export default function RootLayout({
       ratingValue: "5",
       reviewCount: "50",
     },
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How often should I have my windows cleaned?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For residential properties, we recommend window cleaning 2-4 times per year depending on your location and environmental factors. Commercial properties typically benefit from monthly or bi-monthly cleaning to maintain a professional appearance.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide free estimates?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! We offer free, no-obligation estimates for all our services. You can get an instant quote using our online price estimator or contact us directly for a personalized assessment.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are you insured and bonded?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely! Dominion Window Shine is fully insured and bonded for your peace of mind. We carry comprehensive liability insurance and worker's compensation coverage.",
+        },
+      },
+    ],
   };
 
   return (

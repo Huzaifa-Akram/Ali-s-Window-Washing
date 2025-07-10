@@ -4,7 +4,7 @@ import BookService from "@/components/BookService";
 import styles from "./page.module.css";
 import Services from "@/components/Services";
 import PriceEstimator from "@/components/PriceEstimator";
-import Blog from "@/components/Blog";
+import FAQs from "@/components/FAQs";
 
 export default function Home() {
   return (
@@ -34,9 +34,9 @@ export default function Home() {
         <PriceEstimator />
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className={styles.blogSection}>
-        <Blog />
+      {/* FAQs Section */}
+      <section id="faqs" className={styles.faqsSection}>
+        <FAQs />
       </section>
     </div>
   );
