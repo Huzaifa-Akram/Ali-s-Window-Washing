@@ -1,3 +1,10 @@
+export interface ServicePackage {
+  name: string;
+  subtitle: string;
+  includes: string[];
+  note?: string;
+}
+
 export interface ServiceData {
   id: number;
   title: string;
@@ -11,6 +18,7 @@ export interface ServiceData {
   duration?: string;
   frequency?: string;
   detailedDescription?: string;
+  servicePackages?: ServicePackage[];
 }
 
 export const servicesData: ServiceData[] = [
@@ -18,24 +26,66 @@ export const servicesData: ServiceData[] = [
     id: 1,
     title: "Residential Window Cleaning",
     description:
-      "Professional home window cleaning service for houses, condos, and apartments. Get crystal-clear views and enhanced curb appeal with our meticulous attention to detail.",
+      "Professional home window cleaning service with multiple package options. From basic exterior cleaning to complete interior/exterior solutions, we have the perfect service for your needs.",
     detailedDescription:
-      "Transform your home's appearance with our comprehensive residential window cleaning service. We clean both interior and exterior surfaces, ensuring every window sparkles. Our service includes screen cleaning, window sill detailing, and frame cleaning using eco-friendly solutions that are safe for your family and pets.",
+      "Choose from our comprehensive residential cleaning packages designed to meet every homeowner's needs and budget. All services use reverse osmosis and deionized water for crystal-clear, streak-free results.",
     startingPrice: 75,
     image: "/service1.jpg",
     category: "residential",
     popular: true,
-    duration: "2-4 hours",
-    frequency: "Monthly, Bi-monthly, Quarterly",
     features: [
-      "Interior & Exterior Window Cleaning",
-      "Screen Cleaning & Minor Repairs",
-      "Window Sill & Frame Detailing",
-      "Eco-Friendly Cleaning Solutions",
-      "Free Re-cleaning Guarantee",
-      "Flexible Scheduling Options",
-      "Post-Service Quality Inspection",
-      "Insured & Bonded Service",
+      "Multiple service package options available",
+      "Exterior and interior cleaning services",
+      "Specialized sunroom and gazebo cleaning",
+      "Premium screen cleaning included",
+      "Glass, frames, and sills included",
+      "Reverse osmosis & deionized water technology",
+      "No soaps, chemicals, or streaks guaranteed",
+      "Professional residential specialists",
+    ],
+    servicePackages: [
+      {
+        name: "Exterior Window Cleaning",
+        subtitle: "Our Signature Shine",
+        includes: [
+          "Glass, frames, and sills—most companies skip these, but we don't",
+          "Exterior basement windows included (if not screen-covered)",
+          "Reverse osmosis and deionized water for crystal clear results",
+          "No soaps, chemicals, or streaks",
+        ],
+      },
+      {
+        name: "Inside & Out with Screen Cleaning",
+        subtitle: "Complete Interior & Exterior Service",
+        includes: [
+          "Full exterior and interior window cleaning",
+          "Free screen cleaning included (promo item with interior service)",
+          "Glass, frames, and sills—inside and out",
+          "Interior basement windows not included unless walkout or accessible",
+        ],
+      },
+      {
+        name: "Dominion Deluxe Detail",
+        subtitle: "The Ultimate Package",
+        includes: [
+          "Full exterior & interior window cleaning",
+          "Free screen cleaning",
+          "Bottom tracks of opening windows cleaned",
+          "Glass, frames, and sills—inside and out",
+          "Perfect for seasonal deep cleans or move-in/move-out prep",
+        ],
+        note: "Interior basement windows not included unless walkout or accessible by request",
+      },
+      {
+        name: "Sunrooms, Gazebos & Weather Walls",
+        subtitle: "Give your favorite space the treatment it deserves!",
+        includes: [
+          "Ultra-clear view with our gloss-finish method",
+          "Perfect before winter hits for natural Vitamin D rays",
+          "Specialized cleaning for glass structures",
+          "Priced separately depending on structure and size",
+        ],
+      },
     ],
     seoKeywords: [
       "residential window cleaning",
@@ -50,63 +100,150 @@ export const servicesData: ServiceData[] = [
     id: 2,
     title: "Commercial Window Cleaning",
     description:
-      "Professional window cleaning for offices, retail stores, restaurants, and commercial buildings. Maintain a pristine business image with our reliable commercial services.",
+      "Professional commercial window cleaning in Winnipeg for storefronts, apartments, and offices up to 3 stories. Best rates with reliable results.",
     detailedDescription:
-      "Enhance your business's professional appearance with our commercial window cleaning services. We understand the importance of maintaining a spotless storefront and clean office windows. Our team works around your business schedule, offering flexible timing and comprehensive cleaning solutions for all commercial properties.",
+      "Dominion Window Shine provides professional commercial window cleaning services in Winnipeg for businesses, apartment buildings, and storefronts up to 3 stories.",
     startingPrice: 150,
     image: "/service2.jpg",
     category: "commercial",
     popular: true,
-    duration: "4-8 hours",
-    frequency: "Weekly, Bi-weekly, Monthly",
     features: [
-      "Scheduled Regular Maintenance Plans",
-      "High-Rise Window Access Equipment",
-      "Fully Licensed & Insured Service",
-      "Flexible Business Hours Scheduling",
-      "Storefront & Display Window Specialist",
-      "Contract Pricing & Volume Discounts",
-      "Emergency & Rush Service Available",
-      "Professional Business References",
+      "Best rates in Winnipeg for commercial cleaning",
+      "Top-quality, streak-free results guaranteed",
+      "Flexible scheduling for minimal disruption",
+      "Full cleaning: glass, frames, and sills included",
+      "Fully insured and reliable crew",
+      "Chemical-free water technology",
+      "Up to 3-story building service",
+      "Professional business references",
+    ],
+    servicePackages: [
+      {
+        name: "Storefront & Retail Spaces",
+        subtitle: "Professional Image Maintenance",
+        includes: [
+          "Complete storefront window cleaning",
+          "Display window specialist service",
+          "Glass, frames, and sills included",
+          "Flexible scheduling around business hours",
+        ],
+      },
+      {
+        name: "Apartment & Condo Buildings",
+        subtitle: "Multi-Unit Property Service",
+        includes: [
+          "Exterior window cleaning for all units",
+          "Common area glass cleaning",
+          "Bulk pricing for multiple units",
+          "Up to 3-story building access",
+        ],
+      },
+      {
+        name: "Offices & Commercial Units",
+        subtitle: "Professional Workspace Solutions",
+        includes: [
+          "Interior and exterior office windows",
+          "Conference room and lobby glass",
+          "Professional crew with business references",
+          "Contract pricing for regular service",
+          "After-hours cleaning to minimize business disruption",
+        ],
+        note: "Emergency and rush service available upon request",
+      },
+      {
+        name: "Property-Managed Buildings",
+        subtitle: "Comprehensive Building Maintenance",
+        includes: [
+          "Full building exterior window service",
+          "Volume discounts for large properties",
+          "Detailed service reports provided",
+          "Reliable, insured professional service",
+          "Coordinated scheduling with property management",
+        ],
+      },
     ],
     seoKeywords: [
-      "commercial window cleaning",
+      "commercial window cleaning winnipeg",
+      "storefront window cleaning",
+      "apartment building window service",
       "office window washing",
-      "business window service",
       "retail window cleaning",
-      "storefront cleaning",
       "commercial building maintenance",
     ],
   },
   {
     id: 3,
-    title: "Window Maintenance Packages",
+    title: "Snow Removal Services",
     description:
-      "Regular window cleaning maintenance plans designed to keep your windows spotless year-round. Choose from monthly, bi-monthly, or seasonal cleaning schedules with significant savings.",
+      "Professional snow removal services for residential and commercial properties in Winnipeg. From driveways and walkways to rooftops and building maintenance.",
     detailedDescription:
-      "Save money and maintain consistently clean windows with our maintenance package plans. These comprehensive packages include regular scheduled cleanings, priority booking, and special rates. Perfect for both residential and commercial clients who want to ensure their windows always look their best throughout the year.",
-    startingPrice: 60,
+      "Keep your property safe and accessible with our comprehensive snow removal services. We provide reliable, efficient snow clearing for all types of properties throughout Winnipeg's winter season.",
+    startingPrice: 45,
     image: "/service3.jpg",
     category: "maintenance",
-    duration: "Varies by property",
-    frequency: "Customizable schedule",
     features: [
-      "Monthly, Bi-monthly, or Seasonal Plans",
-      "Priority Booking & Scheduling",
-      "Significant Package Rate Discounts",
-      "Weather Protection & Rescheduling",
-      "Emergency Clean-Up Service Included",
-      "Annual Window Health Assessment",
-      "Flexible Payment Options",
-      "Performance Tracking & Reports",
+      "Residential driveway and walkway clearing",
+      "Commercial parking lot snow removal",
+      "Professional rooftop snow clearing",
+      "Emergency snow removal service",
+      "Seasonal contracts and one-time service",
+      "Ice management and de-icing solutions",
+      "Fully insured and reliable crew",
+      "Modern snow removal equipment",
+    ],
+    servicePackages: [
+      {
+        name: "Residential Snow Removal",
+        subtitle: "Keep Your Home Accessible",
+        includes: [
+          "Driveway and walkway snow clearing",
+          "Front entrance and porch areas",
+          "Pathway to garage and side entrances",
+          "Light ice management included",
+        ],
+      },
+      {
+        name: "Commercial Snow Removal",
+        subtitle: "Business Property Maintenance",
+        includes: [
+          "Parking lot and roadway clearing",
+          "Building entrance and walkway service",
+          "Loading dock and delivery areas",
+          "Emergency response for urgent needs",
+        ],
+      },
+      {
+        name: "Rooftop Snow Removal",
+        subtitle: "Professional Safety Service",
+        includes: [
+          "Safe rooftop snow clearing techniques",
+          "Prevention of ice dam formation",
+          "Structural load reduction service",
+          "Emergency rooftop snow removal",
+          "Professional safety equipment used",
+        ],
+        note: "Available for buildings up to 3 stories in height",
+      },
+      {
+        name: "Seasonal Snow Contracts",
+        subtitle: "Complete Winter Solutions",
+        includes: [
+          "Full winter season coverage",
+          "Priority response during snowstorms",
+          "Contract pricing with locked rates",
+          "Ice management and salt application",
+          "Equipment maintenance and reliability guarantee",
+        ],
+        note: "Seasonal contracts available with flexible payment options",
+      },
     ],
     seoKeywords: [
-      "window maintenance plans",
-      "regular window cleaning",
-      "window cleaning packages",
-      "seasonal window service",
-      "window cleaning contracts",
-      "maintenance agreements",
+      "snow removal winnipeg",
+      "residential snow clearing",
+      "commercial snow removal",
+      "rooftop snow removal",
+      "winter property maintenance",
+      "snow plowing services",
     ],
   },
 ];

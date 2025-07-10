@@ -19,29 +19,15 @@ const AboutUs: React.FC = () => {
             </div>
             <div className={styles.description}>
               <p className={styles.intro}>
-                At Dominion Window Shine, we believe every window deserves to
-                shine like new—without breaking the bank. Founded right here in
-                Manitoba, we&apos;re proud to offer the most competitive window
-                cleaning rates in town.
+                Manitoba&apos;s premier window cleaning service offering
+                unbeatable rates without compromising quality. We use advanced
+                reverse osmosis technology for crystal-clear, streak-free
+                results—100% eco-friendly, no chemicals.
               </p>
               <p className={styles.story}>
-                Low prices don&apos;t mean cutting corners. We use advanced
-                reverse osmosis and deionized water technology, ensuring
-                crystal-clear, streak-free results—with no soaps, no chemicals,
-                and no residue left behind.
-              </p>
-              <p className={styles.story}>
-                Every home or business we clean gets our full attention and
-                care, because we treat your property like it&apos;s our own.
-                Whether it&apos;s a bungalow, storefront, or multi-story home,
-                we take pride in delivering spotless results every single time.
-              </p>
-            </div>
-            <div className={styles.closingStatement}>
-              <p className={styles.closingText}>
-                Let Dominion Window Shine bring natural light back into your
-                space—with eco-friendly methods, honest service, and unbeatable
-                value.
+                From residential homes to commercial buildings, we deliver
+                spotless windows every time. Professional, reliable, and
+                satisfaction guaranteed.
               </p>
             </div>
             <div className={styles.featuresGrid}>
@@ -57,13 +43,12 @@ const AboutUs: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m-3-6h6"
+                      d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
                     />
                   </svg>
                 </div>
                 <div className={styles.featureContent}>
                   <h3>Most Affordable Rates</h3>
-                  <p>Best prices in town, guaranteed</p>
                 </div>
               </div>
 
@@ -85,7 +70,6 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className={styles.featureContent}>
                   <h3>Reverse Osmosis Technology</h3>
-                  <p>Pure water for spotless windows</p>
                 </div>
               </div>
 
@@ -107,7 +91,6 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className={styles.featureContent}>
                   <h3>100% Eco-Friendly</h3>
-                  <p>No chemicals, just pure water</p>
                 </div>
               </div>
 
@@ -123,22 +106,18 @@ const AboutUs: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                     />
                   </svg>
                 </div>
                 <div className={styles.featureContent}>
                   <h3>Satisfaction Guaranteed</h3>
-                  <p>Not happy? We&apos;ll make it right</p>
                 </div>
               </div>
             </div>
             <div className={styles.ctaSection}>
               <a href="#price-estimator" className={styles.primaryButton}>
                 Get Free Quote
-              </a>
-              <a href="#services" className={styles.secondaryButton}>
-                Our Services
               </a>
             </div>
           </div>

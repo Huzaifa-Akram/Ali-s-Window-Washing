@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./ServiceCard.module.css";
 import { getFeaturedServices } from "../data/servicedata";
 import { ArrowRight } from "lucide-react";
@@ -52,14 +53,14 @@ function ServiceCard() {
               USD
             </span>
           </p>
-          <button
+          <Link
+            href={`/services#service-${service.id}`}
             className={styles.learnMoreButton}
             aria-label={`Learn more about ${service.title} service`}
-            type="button"
             title={`Get details about our ${service.title} service starting at $${service.startingPrice}`}
           >
             <ArrowRight className={styles.icon} aria-hidden="true" role="img" />
-          </button>
+          </Link>
         </article>
       ))}
     </div>

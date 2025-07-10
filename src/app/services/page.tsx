@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllServices } from "@/data/servicedata";
+import SmoothScrollToHash from "@/components/SmoothScrollToHash";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function ServicesPage() {
 
   return (
     <div className={styles.container}>
+      <SmoothScrollToHash />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -102,7 +104,11 @@ export default function ServicesPage() {
 
         <div className={styles.servicesGrid}>
           {services.map((service) => (
-            <div key={service.id} className={styles.serviceCard}>
+            <div
+              key={service.id}
+              className={styles.serviceCard}
+              id={`service-${service.id}`}
+            >
               <div className={styles.serviceHeader}>
                 <div className={styles.serviceIcon}>
                   {getServiceIcon(service.category)}
@@ -113,37 +119,68 @@ export default function ServicesPage() {
                 </span>
               </div>
 
-              <p className={styles.serviceDescription}>
-                {service.detailedDescription || service.description}
-              </p>
+              <div className={styles.serviceContent}>
+                <p className={styles.serviceDescription}>
+                  {service.detailedDescription || service.description}
+                </p>
 
-              <div className={styles.serviceDetails}>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Duration</span>
-                  <span className={styles.detailValue}>{service.duration}</span>
-                </div>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Frequency</span>
-                  <span className={styles.detailValue}>
-                    {service.frequency}
+                <div className={styles.servicePrice}>
+                  <span className={styles.priceLabel}>Starting from:</span>
+                  <span className={styles.priceAmount}>
+                    ${service.startingPrice}
                   </span>
                 </div>
-              </div>
 
-              <div className={styles.servicePrice}>
-                <span className={styles.priceLabel}>Starting from:</span>
-                <span className={styles.priceAmount}>
-                  ${service.startingPrice}
-                </span>
-              </div>
+                {/* Service Packages */}
+                {service.servicePackages &&
+                  service.servicePackages.length > 0 && (
+                    <div className={styles.servicePackages}>
+                      <h4 className={styles.packagesTitle}>
+                        Available Packages
+                      </h4>
+                      {service.servicePackages.map((pkg, index) => (
+                        <div key={index} className={styles.packageCard}>
+                          <div className={styles.packageHeader}>
+                            <h5 className={styles.packageName}>{pkg.name}</h5>
+                            <p className={styles.packageSubtitle}>
+                              {pkg.subtitle}
+                            </p>
+                          </div>
+                          <div className={styles.packageIncludes}>
+                            <span className={styles.includesLabel}>
+                              Includes:
+                            </span>
+                            <ul className={styles.includesList}>
+                              {pkg.includes.map((item, itemIndex) => (
+                                <li
+                                  key={itemIndex}
+                                  className={styles.includesItem}
+                                >
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                            {pkg.note && (
+                              <p className={styles.packageNote}>{pkg.note}</p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-              <div className={styles.featuresGrid}>
-                {service.features.map((feature, index) => (
-                  <div key={index} className={styles.featureItem}>
-                    <span className={styles.featureIcon}>✓</span>
-                    <span>{feature}</span>
+                {/* Regular Features - For services without packages */}
+                {(!service.servicePackages ||
+                  service.servicePackages.length === 0) && (
+                  <div className={styles.featuresGrid}>
+                    {service.features.map((feature, index) => (
+                      <div key={index} className={styles.featureItem}>
+                        <span className={styles.featureIcon}>✓</span>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
 
               <div className={styles.serviceActions}>
