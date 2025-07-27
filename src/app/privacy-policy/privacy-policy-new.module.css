@@ -54,17 +54,17 @@
 }
 
 .subtitle {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #475569;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .lastUpdated {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
   font-size: 0.875rem;
@@ -72,7 +72,7 @@
   background: #f1f5f9;
   padding: 1rem 2rem;
   border-radius: 8px;
-  border-left: 4px solid #6366f1;
+  border-left: 4px solid #3b82f6;
 }
 
 .content {
@@ -201,148 +201,14 @@
   .title {
     font-size: 2rem;
   }
-}
 
-.contactInfo {
-  background: #f8fafc;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  margin: 2rem 0;
-}
-
-.contactInfo h3 {
-  color: #1e293b;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.contactInfo p {
-  margin-bottom: 0.75rem;
-  color: #334155;
-}
-
-.contactInfo a {
-  color: #6366f1;
-  text-decoration: none;
-}
-
-.contactInfo a:hover {
-  color: #4f46e5;
-  text-decoration: underline;
-}
-
-.businessInfo {
-  background: #ecfdf5;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #10b981;
-  margin: 2rem 0;
-}
-
-.businessInfo h3 {
-  color: #047857;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.businessInfo p {
-  margin-bottom: 0.75rem;
-  color: #047857;
-}
-
-.acknowledgment {
-  background: #fef3c7;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #fbbf24;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.acknowledgment p {
-  color: #92400e;
-  font-size: 1.125rem;
-  margin-bottom: 0;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding-top: 60px;
-  }
-
-  .header {
-    padding: 3rem 0 2rem;
-  }
-
-  .title {
-    font-size: 2.25rem;
-    padding: 0 1.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.125rem;
-    padding: 0 1.5rem;
-  }
-
-  .lastUpdated {
-    padding: 1rem 1.5rem;
-    margin: 0 1.5rem;
-  }
-
+  .breadcrumb,
+  .title,
+  .subtitle,
+  .lastUpdated,
   .content {
-    padding: 0 1.5rem 3rem;
-  }
-
-  .section {
-    padding: 2rem 1.5rem;
-  }
-
-  .section h2 {
-    font-size: 1.5rem;
-  }
-
-  .section h3 {
-    font-size: 1.25rem;
-  }
-
-  .breadcrumb {
-    padding: 0 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.875rem;
-    padding: 0 1rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .lastUpdated {
-    padding: 1rem;
-    margin: 0 1rem;
-  }
-
-  .content {
-    padding: 0 1rem 2rem;
-  }
-
-  .section {
-    padding: 1.5rem 1rem;
-  }
-
-  .breadcrumb {
-    padding: 0 1rem;
-  }
-
-  .contactInfo,
-  .businessInfo,
-  .acknowledgment {
-    padding: 1.5rem;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

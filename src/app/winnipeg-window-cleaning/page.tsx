@@ -69,7 +69,7 @@ export default function WinnipegWindowCleaning() {
           <div className={styles.mainContent}>
             <h2>Window Cleaning Services in Winnipeg, Manitoba</h2>
             <p>
-              Dominion Window Shine is Winnipeg's premier window cleaning
+              Dominion Window Shine is Winnipeg&apos;s premier window cleaning
               company, serving residential and commercial properties throughout
               the city. Our professional team provides crystal clear results
               using state-of-the-art equipment and eco-friendly cleaning
@@ -80,7 +80,7 @@ export default function WinnipegWindowCleaning() {
             <ul>
               <li>
                 <strong>Local Winnipeg Business:</strong> We understand the
-                unique challenges of window cleaning in Manitoba's climate
+                unique challenges of window cleaning in Manitoba&apos;s climate
               </li>
               <li>
                 <strong>Fully Insured & Bonded:</strong> Complete liability
@@ -171,9 +171,9 @@ export default function WinnipegWindowCleaning() {
             <p>
               Ready to experience the difference professional window cleaning
               makes? Contact Dominion Window Shine today for your free,
-              no-obligation quote. We're proud to serve Winnipeg and surrounding
-              Manitoba communities with reliable, professional window cleaning
-              services.
+              no-obligation quote. We&apos;re proud to serve Winnipeg and
+              surrounding Manitoba communities with reliable, professional
+              window cleaning services.
             </p>
 
             <div className={styles.ctaSection}>

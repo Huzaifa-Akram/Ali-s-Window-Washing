@@ -1,35 +1,33 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   padding-top: 80px;
 }
 
 .header {
   background: white;
-  padding: 3rem 0 2rem;
+  padding: 4rem 0 3rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumb {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   font-size: 0.875rem;
   color: #64748b;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .breadcrumb a {
-  color: #3b82f6;
+  color: #6366f1;
   text-decoration: none;
   transition: color 0.2s ease;
-  font-weight: 500;
 }
 
 .breadcrumb a:hover {
-  color: #2563eb;
+  color: #4f46e5;
 }
 
 .breadcrumbSeparator {
@@ -39,14 +37,14 @@
 
 .breadcrumbCurrent {
   color: #1e293b;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .title {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
@@ -76,131 +74,58 @@
 }
 
 .content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem 4rem;
 }
 
 .section {
   background: white;
-  margin-bottom: 1.5rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding: 3rem;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
-  transition: box-shadow 0.2s ease;
-}
-
-.section:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .section h2 {
   color: #1e293b;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #3b82f6;
+  border-bottom: 2px solid #6366f1;
 }
 
 .section h3 {
   color: #334155;
-  font-size: 1.125rem;
+  font-size: 1.375rem;
   font-weight: 600;
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .section p {
   color: #475569;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 .section ul {
-  margin: 1rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.section ol {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   padding-left: 1.5rem;
 }
 
 .section li {
   color: #475569;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.section li:before {
-  content: "•";
-  color: #3b82f6;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 .section li strong {
   color: #1e293b;
   font-weight: 600;
-}
-
-.link {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.link:hover {
-  color: #2563eb;
-  text-decoration: underline;
-}
-
-.contactInfo {
-  background: #f8fafc;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-top: 1rem;
-}
-
-.contactGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.contactGrid h3 {
-  color: #1e293b;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 0.5rem;
-}
-
-.contactGrid p {
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .contactGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .section {
-    padding: 1.5rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
 }
 
 .contactInfo {
@@ -232,38 +157,33 @@
   text-decoration: underline;
 }
 
-.businessInfo {
-  background: #ecfdf5;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #10b981;
-  margin: 2rem 0;
-}
-
-.businessInfo h3 {
-  color: #047857;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.businessInfo p {
-  margin-bottom: 0.75rem;
-  color: #047857;
-}
-
-.acknowledgment {
+.regulatoryInfo {
   background: #fef3c7;
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid #fbbf24;
   margin: 2rem 0;
-  text-align: center;
 }
 
-.acknowledgment p {
+.regulatoryInfo h3 {
   color: #92400e;
-  font-size: 1.125rem;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.regulatoryInfo p {
+  margin-bottom: 0.75rem;
+  color: #92400e;
+}
+
+.regulatoryInfo a {
+  color: #92400e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.regulatoryInfo a:hover {
+  text-decoration: underline;
 }
 
 /* Mobile Responsive */
@@ -341,8 +261,7 @@
   }
 
   .contactInfo,
-  .businessInfo,
-  .acknowledgment {
+  .regulatoryInfo {
     padding: 1.5rem;
   }
 }
