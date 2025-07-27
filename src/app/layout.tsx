@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     creator: "@DominionWindowShine",
   },
   verification: {
-    google: "AN2OPa2VqBJVyj3ZkQDx26KP93CvE7nPQGAfL4og_c0",
+    google: "FGMwPxH9z_snh03SzaHQ-kKdsF018HWFGjcc6zVsYhM",
     yandex: "verification_code_here",
     yahoo: "verification_code_here",
   },
