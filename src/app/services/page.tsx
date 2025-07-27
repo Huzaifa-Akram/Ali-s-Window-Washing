@@ -5,11 +5,23 @@ import SmoothScrollToHash from "@/components/SmoothScrollToHash";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Our Services - Dominion Window Shine",
+  title:
+    "Window Cleaning Services | Residential & Commercial | Winnipeg Manitoba",
   description:
-    "Discover our comprehensive window cleaning services including residential, commercial, and maintenance packages. Professional, reliable, and affordable window cleaning solutions.",
+    "Comprehensive window cleaning services in Winnipeg, Manitoba. Residential window cleaning, commercial storefront cleaning, eavestrough cleaning, pressure washing. Professional equipment, eco-friendly solutions, free estimates for all services.",
   keywords:
-    "window cleaning services, residential window cleaning, commercial window cleaning, window maintenance, professional window washing",
+    "window cleaning services winnipeg, residential window cleaning manitoba, commercial window cleaning winnipeg, storefront cleaning manitoba, eavestrough cleaning winnipeg, gutter cleaning services, pressure washing winnipeg, house washing manitoba, window maintenance services, professional window washing winnipeg",
+  alternates: {
+    canonical: "https://dominionwindowshine.ca/services",
+  },
+  openGraph: {
+    title:
+      "Window Cleaning Services | Residential & Commercial | Winnipeg Manitoba",
+    description:
+      "Comprehensive window cleaning services in Winnipeg, Manitoba. Professional equipment, eco-friendly solutions, free estimates.",
+    url: "https://dominionwindowshine.ca/services",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {

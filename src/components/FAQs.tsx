@@ -12,33 +12,33 @@ interface FAQ {
 const faqData: FAQ[] = [
   {
     id: 1,
-    question: "How often should I have my windows cleaned?",
+    question: "How much does window cleaning cost in Winnipeg?",
     answer:
-      "For residential properties, we recommend window cleaning 2-4 times per year depending on your location and environmental factors. Commercial properties typically benefit from monthly or bi-monthly cleaning to maintain a professional appearance.",
+      "Window cleaning costs in Winnipeg vary based on the size of your property, number of windows, and services required. Residential window cleaning typically starts at $50, while commercial services start at $100. Use our online price estimator for an instant quote tailored to your specific needs.",
   },
   {
     id: 2,
-    question: "Do you provide free estimates?",
+    question: "Do you provide free estimates for window cleaning in Manitoba?",
     answer:
-      "Yes! We offer free, no-obligation estimates for all our services. You can get an instant quote using our online price estimator or contact us directly for a personalized assessment.",
+      "Yes! We offer free, no-obligation estimates for all our window cleaning services in Winnipeg, Manitoba and surrounding areas. You can get an instant quote using our online price estimator or contact us directly for a personalized assessment of your property.",
   },
   {
     id: 3,
-    question: "Are you insured and bonded?",
+    question: "What areas do you serve for window cleaning in Manitoba?",
     answer:
-      "Absolutely! Dominion Window Shine is fully insured and bonded for your peace of mind. We carry comprehensive liability insurance and worker's compensation coverage.",
+      "We proudly serve Winnipeg and the greater Manitoba region including Steinbach, Niverville, St. Anne, East Saint Paul, West Saint Paul, La Salle, Oak Bluff, Dugald, Grande Pointe, Deacons Corner, Howden, Navin, North Transcona, Assiniboia, Brandon, and Portage la Prairie. Contact us to confirm window cleaning service availability in your specific location.",
   },
   {
     id: 4,
-    question: "What areas do you serve in Manitoba?",
+    question: "Are you insured and bonded for window cleaning services?",
     answer:
-      "We proudly serve all of Manitoba including Winnipeg, Brandon, Steinbach, Portage la Prairie, and surrounding areas. Contact us to confirm service availability in your specific location.",
+      "Absolutely! Dominion Window Shine is fully insured and bonded for your peace of mind. We carry comprehensive liability insurance and worker's compensation coverage for all our window cleaning services in Manitoba.",
   },
   {
     id: 5,
-    question: "What happens if it rains after you clean my windows?",
+    question: "What window cleaning services do you offer in Winnipeg?",
     answer:
-      "If it rains within 24 hours of our service and affects the quality of our work, we'll return to re-clean your windows at no additional charge. We stand behind our work!",
+      "We offer comprehensive window cleaning services including exterior and interior window cleaning, storefront cleaning, eavestrough cleaning, gutter cleaning, pressure washing, and post-construction cleanup for both residential and commercial properties in Winnipeg and Manitoba.",
   },
 ];
 
@@ -63,11 +63,13 @@ const FAQs: React.FC = () => {
     >
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.subtitle}>Questions & Answers</div>
-          <h2 className={styles.title}>Common Questions About Our Services</h2>
+          <div className={styles.subtitle}>Frequently Asked Questions</div>
+          <h2 className={styles.title}>
+            Window Cleaning Services FAQ - Winnipeg, Manitoba
+          </h2>
           <p className={styles.description}>
             Everything you need to know about our professional window cleaning
-            services
+            services in Winnipeg, Manitoba and across Canada
           </p>
         </div>
 

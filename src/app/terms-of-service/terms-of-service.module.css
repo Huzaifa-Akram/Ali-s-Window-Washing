@@ -1,0 +1,289 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 80px;
+}
+
+.header {
+  background: white;
+  padding: 4rem 0 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  color: #6366f1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #4f46e5;
+}
+
+.breadcrumbSeparator {
+  margin: 0 0.5rem;
+  color: #cbd5e1;
+}
+
+.breadcrumbCurrent {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.lastUpdated {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.section {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.section h2 {
+  color: #1e293b;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #6366f1;
+}
+
+.section h3 {
+  color: #334155;
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+
+.section p {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.section ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.section ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.section li {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.section li strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.contactInfo {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}
+
+.contactInfo h3 {
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.contactInfo p {
+  margin-bottom: 0.75rem;
+  color: #334155;
+}
+
+.contactInfo a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.contactInfo a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.businessInfo {
+  background: #ecfdf5;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #10b981;
+  margin: 2rem 0;
+}
+
+.businessInfo h3 {
+  color: #047857;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.businessInfo p {
+  margin-bottom: 0.75rem;
+  color: #047857;
+}
+
+.acknowledgment {
+  background: #fef3c7;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #fbbf24;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.acknowledgment p {
+  color: #92400e;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
+
+  .header {
+    padding: 3rem 0 2rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+    padding: 0 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    padding: 0 1.5rem;
+  }
+
+  .lastUpdated {
+    padding: 1rem 1.5rem;
+    margin: 0 1.5rem;
+  }
+
+  .content {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .section {
+    padding: 2rem 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 1.25rem;
+  }
+
+  .breadcrumb {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.875rem;
+    padding: 0 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .lastUpdated {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+
+  .content {
+    padding: 0 1rem 2rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .breadcrumb {
+    padding: 0 1rem;
+  }
+
+  .contactInfo,
+  .businessInfo,
+  .acknowledgment {
+    padding: 1.5rem;
+  }
+}

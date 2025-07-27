@@ -605,6 +605,180 @@
   border-radius: 4px;
 }
 
+/* Additional styles for location pages */
+.neighborhoodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.neighborhoodColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.neighborhoodColumn li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.neighborhoodColumn li:last-child {
+  border-bottom: none;
+}
+
+.content {
+  padding: 4rem 0;
+}
+
+.contentWrapper {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-desktop, 2rem);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.mainContent {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mainContent h2 {
+  color: #1e293b;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.mainContent h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.mainContent h4 {
+  color: #1e293b;
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.mainContent p {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.mainContent ul {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.mainContent li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebarCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.sidebarCard h3 {
+  color: #1e293b;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sidebarCard p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sidebarCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebarCard li {
+  padding: 0.5rem 0;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebarCard li:last-child {
+  border-bottom: none;
+}
+
+.sidebarCta {
+  display: inline-block;
+  background: linear-gradient(135deg, #6382f7, #4f46e5);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sidebarCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 130, 247, 0.3);
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: #6382f7;
+  border: 2px solid #6382f7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.ctaButtonSecondary:hover {
+  background: #6382f7;
+  color: white;
+  transform: translateY(-2px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {

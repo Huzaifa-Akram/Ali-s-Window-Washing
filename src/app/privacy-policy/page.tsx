@@ -1,123 +1,307 @@
 import { Metadata } from "next";
-import styles from "../page.module.css";
+import Link from "next/link";
+import styles from "./privacy-policy.module.css";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Dominion Window Shine",
+  title: "Privacy Policy - Dominion Window Shine | Window Cleaning Winnipeg",
   description:
-    "Privacy policy for Dominion Window Shine services. Learn how we protect and handle your personal information.",
+    "Privacy policy for Dominion Window Shine window cleaning services. Learn how we protect and handle your personal information in compliance with Canadian privacy laws.",
+  keywords:
+    "privacy policy, data protection, personal information, window cleaning winnipeg, dominion window shine",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://dominionwindowshine.ca/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {
   return (
     <div className={styles.container}>
-      <section className={styles.section} style={{ paddingTop: "2rem" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", lineHeight: "1.6" }}>
-          <h1 style={{ marginBottom: "2rem", color: "#1e293b" }}>
-            Privacy Policy
-          </h1>
+      <div className={styles.header}>
+        <div className={styles.breadcrumb}>
+          <Link href="/">Home</Link>
+          <span className={styles.breadcrumbSeparator}>•</span>
+          <span className={styles.breadcrumbCurrent}>Privacy Policy</span>
+        </div>
+        <h1 className={styles.title}>Privacy Policy</h1>
+        <p className={styles.subtitle}>
+          Your privacy is important to us. This policy explains how Dominion
+          Window Shine collects, uses, and protects your personal information.
+        </p>
+        <div className={styles.lastUpdated}>
+          <strong>Last Updated:</strong> July 27, 2025
+        </div>
+      </div>
 
-          <div style={{ marginBottom: "2rem" }}>
+      <div className={styles.content}>
+        <section className={styles.section}>
+          <h2>1. Information We Collect</h2>
+
+          <h3>Personal Information</h3>
+          <p>When you use our window cleaning services, we may collect:</p>
+          <ul>
+            <li>
+              <strong>Contact Information:</strong> Name, address, phone number,
+              email address
+            </li>
+            <li>
+              <strong>Service Information:</strong> Property details, service
+              preferences, scheduling information
+            </li>
+            <li>
+              <strong>Payment Information:</strong> Billing address, payment
+              method details (processed securely)
+            </li>
+            <li>
+              <strong>Communication Records:</strong> Messages, calls, and
+              service requests
+            </li>
+          </ul>
+
+          <h3>Automatically Collected Information</h3>
+          <p>We may automatically collect:</p>
+          <ul>
+            <li>IP address and browser information</li>
+            <li>Website usage data and analytics</li>
+            <li>Device and location information (with permission)</li>
+            <li>Cookies and similar tracking technologies</li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>2. How We Use Your Information</h2>
+          <p>We use your personal information to:</p>
+          <ul>
+            <li>
+              <strong>Provide Services:</strong> Schedule, perform, and manage
+              window cleaning services
+            </li>
+            <li>
+              <strong>Communication:</strong> Contact you about appointments,
+              updates, and service reminders
+            </li>
+            <li>
+              <strong>Payment Processing:</strong> Process payments and maintain
+              billing records
+            </li>
+            <li>
+              <strong>Customer Support:</strong> Respond to inquiries and
+              resolve service issues
+            </li>
+            <li>
+              <strong>Business Operations:</strong> Improve our services,
+              conduct quality assurance
+            </li>
+            <li>
+              <strong>Marketing:</strong> Send promotional offers (with your
+              consent)
+            </li>
+            <li>
+              <strong>Legal Compliance:</strong> Meet regulatory requirements
+              and protect our rights
+            </li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>3. Information Sharing and Disclosure</h2>
+
+          <h3>We Do Not Sell Your Information</h3>
+          <p>
+            Dominion Window Shine does not sell, rent, or trade your personal
+            information to third parties for marketing purposes.
+          </p>
+
+          <h3>Limited Sharing</h3>
+          <p>We may share your information only in these circumstances:</p>
+          <ul>
+            <li>
+              <strong>Service Providers:</strong> Trusted partners who help us
+              operate our business (payment processors, scheduling software)
+            </li>
+            <li>
+              <strong>Legal Requirements:</strong> When required by law, court
+              order, or government request
+            </li>
+            <li>
+              <strong>Business Transfers:</strong> In connection with a merger,
+              sale, or transfer of business assets
+            </li>
+            <li>
+              <strong>Safety and Protection:</strong> To protect the rights,
+              property, or safety of our customers and employees
+            </li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>4. Data Security</h2>
+          <p>
+            We implement industry-standard security measures to protect your
+            information:
+          </p>
+          <ul>
+            <li>Encrypted data transmission using SSL technology</li>
+            <li>Secure payment processing through certified providers</li>
+            <li>Regular security assessments and updates</li>
+            <li>
+              Limited access to personal information on a need-to-know basis
+            </li>
+            <li>Employee training on privacy and security practices</li>
+          </ul>
+          <p>
+            While we strive to protect your information, no method of
+            transmission over the internet or electronic storage is 100% secure.
+            We cannot guarantee absolute security.
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>5. Your Privacy Rights</h2>
+
+          <h3>Under Canadian Privacy Laws (PIPEDA)</h3>
+          <p>You have the right to:</p>
+          <ul>
+            <li>
+              <strong>Access:</strong> Request copies of your personal
+              information
+            </li>
+            <li>
+              <strong>Correction:</strong> Update or correct inaccurate
+              information
+            </li>
+            <li>
+              <strong>Withdrawal:</strong> Withdraw consent for marketing
+              communications
+            </li>
+            <li>
+              <strong>Complaint:</strong> File a complaint with the Privacy
+              Commissioner of Canada
+            </li>
+          </ul>
+
+          <h3>How to Exercise Your Rights</h3>
+          <p>To exercise these rights, contact us at:</p>
+          <div className={styles.contactInfo}>
             <p>
-              <strong>Last updated:</strong> June 18, 2025
+              <strong>Email:</strong> privacy@dominionwindowshine.ca
+            </p>
+            <p>
+              <strong>Phone:</strong> (431) 293-4714
+            </p>
+            <p>
+              <strong>Mail:</strong> Dominion Window Shine, Winnipeg, MB, Canada
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2>6. Cookies and Tracking</h2>
+          <p>Our website uses cookies to:</p>
+          <ul>
+            <li>Remember your preferences and settings</li>
+            <li>Analyze website traffic and usage patterns</li>
+            <li>Provide personalized content and advertisements</li>
+            <li>Improve website functionality and user experience</li>
+          </ul>
+          <p>
+            You can control cookies through your browser settings. Disabling
+            cookies may affect website functionality.
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>7. Data Retention</h2>
+          <p>
+            We retain your personal information for as long as necessary to:
+          </p>
+          <ul>
+            <li>Provide ongoing window cleaning services</li>
+            <li>Comply with legal and regulatory requirements</li>
+            <li>Resolve disputes and enforce agreements</li>
+            <li>Maintain business records for operational purposes</li>
+          </ul>
+          <p>
+            Typically, we retain customer information for 7 years after the last
+            service, unless a longer retention period is required by law.
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>8. Children's Privacy</h2>
+          <p>
+            Our services are not directed to individuals under 18 years of age.
+            We do not knowingly collect personal information from children. If
+            we become aware that we have collected information from a child, we
+            will delete it promptly.
+          </p>
+        </section>
+
+        <section className={styles.section}>
+          <h2>9. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes in our practices or applicable laws. We will notify you of
+            significant changes by:
+          </p>
+          <ul>
+            <li>Posting the updated policy on our website</li>
+            <li>Sending email notifications to registered customers</li>
+            <li>Including notices with service communications</li>
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h2>10. Contact Information</h2>
+          <p>
+            If you have questions, concerns, or complaints about this Privacy
+            Policy or our privacy practices, please contact us:
+          </p>
+          <div className={styles.contactInfo}>
+            <h3>Dominion Window Shine</h3>
+            <p>
+              <strong>Privacy Officer</strong>
+            </p>
+            <p>
+              <strong>Email:</strong> privacy@dominionwindowshine.ca
+            </p>
+            <p>
+              <strong>Phone:</strong> (431) 293-4714
+            </p>
+            <p>
+              <strong>Address:</strong> Winnipeg, Manitoba, Canada
+            </p>
+            <p>
+              <strong>Website:</strong>{" "}
+              <Link href="https://dominionwindowshine.ca">
+                dominionwindowshine.ca
+              </Link>
             </p>
           </div>
 
-          <h2
-            style={{
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              color: "#334155",
-            }}
-          >
-            Information We Collect
-          </h2>
-          <p>
-            We collect information you provide directly to us, such as when you
-            request a quote, book our services, or contact us. This may include
-            your name, address, phone number, email address, and details about
-            your window cleaning needs.
-          </p>
-
-          <h2
-            style={{
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              color: "#334155",
-            }}
-          >
-            How We Use Your Information
-          </h2>
-          <p>We use the information we collect to:</p>
-          <ul style={{ marginLeft: "2rem", marginBottom: "1rem" }}>
-            <li>Provide window cleaning services</li>
-            <li>Communicate with you about our services</li>
-            <li>Send you appointment confirmations and reminders</li>
-            <li>Improve our services</li>
-            <li>Comply with legal obligations</li>
-          </ul>
-
-          <h2
-            style={{
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              color: "#334155",
-            }}
-          >
-            Information Sharing
-          </h2>
-          <p>
-            We do not sell, trade, or rent your personal information to third
-            parties. We may share your information only in the following
-            circumstances:
-          </p>
-          <ul style={{ marginLeft: "2rem", marginBottom: "1rem" }}>
-            <li>With your consent</li>
-            <li>To comply with legal obligations</li>
-            <li>To protect our rights and safety</li>
-          </ul>
-
-          <h2
-            style={{
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              color: "#334155",
-            }}
-          >
-            Data Security
-          </h2>
-          <p>
-            We implement appropriate technical and organizational measures to
-            protect your personal information against unauthorized access,
-            alteration, disclosure, or destruction.
-          </p>
-
-          <h2
-            style={{
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              color: "#334155",
-            }}
-          >
-            Contact Us
-          </h2>
-          <p>
-            If you have any questions about this Privacy Policy, please contact
-            us at:
-          </p>
-          <ul style={{ marginLeft: "2rem", listStyle: "none" }}>
-            <li>
-              <strong>Email:</strong> info@truenorthwindowwashing.com
-            </li>
-            <li>
-              <strong>Phone:</strong> (555) 123-4567
-            </li>
-            <li>
-              <strong>Address:</strong> 123 Main Street, Your City, State 12345
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div className={styles.regulatoryInfo}>
+            <h3>Privacy Commissioner of Canada</h3>
+            <p>
+              If you are not satisfied with our response to your privacy
+              concern, you may contact:
+            </p>
+            <p>
+              <strong>Office of the Privacy Commissioner of Canada</strong>
+            </p>
+            <p>
+              Website:{" "}
+              <a
+                href="https://www.priv.gc.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.priv.gc.ca
+              </a>
+            </p>
+            <p>Phone: 1-800-282-1376</p>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

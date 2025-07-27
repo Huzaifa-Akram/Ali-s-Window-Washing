@@ -1,51 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://truenorthwindowwashing.com</loc>
-    <lastmod>2025-06-18</lastmod>
+    <loc>https://dominionwindowshine.ca</loc>
+    <lastmod>2025-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://truenorthwindowwashing.com/#about</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://truenorthwindowwashing.com/#services</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://dominionwindowshine.ca/services</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://truenorthwindowwashing.com/#pricing</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://truenorthwindowwashing.com/#contact</loc>
-    <lastmod>2025-06-18</lastmod>
+    <loc>https://dominionwindowshine.ca/#about</loc>
+    <lastmod>2025-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://truenorthwindowwashing.com/#book-service</loc>
-    <lastmod>2025-06-18</lastmod>
+    <loc>https://dominionwindowshine.ca/#services</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dominionwindowshine.ca/#price-estimator</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dominionwindowshine.ca/#book-service</loc>
+    <lastmod>2025-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://truenorthwindowwashing.com/privacy-policy</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://dominionwindowshine.ca/#faqs</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://truenorthwindowwashing.com/terms-of-service</loc>
-    <lastmod>2025-06-18</lastmod>
+    <loc>https://dominionwindowshine.ca/blog</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dominionwindowshine.ca/privacy-policy</loc>
+    <lastmod>2025-07-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dominionwindowshine.ca/terms-of-service</loc>
+    <lastmod>2025-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

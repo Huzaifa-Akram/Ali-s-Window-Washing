@@ -1,0 +1,50 @@
+{
+  "name": "Dominion Window Shine - Window Cleaning Services Winnipeg Manitoba",
+  "short_name": "Dominion Window Shine",
+  "description": "Professional window cleaning services in Winnipeg, Manitoba & across Canada. Residential & commercial window washing with free estimates.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#fbbf24",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-CA",
+  "categories": ["business", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Get Free Quote",
+      "short_name": "Quote",
+      "description": "Get instant free quote for window cleaning",
+      "url": "/#price-estimator",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our window cleaning services",
+      "url": "/services",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Book Service",
+      "short_name": "Book",
+      "description": "Book window cleaning service",
+      "url": "/#book-service",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    }
+  ]
+}

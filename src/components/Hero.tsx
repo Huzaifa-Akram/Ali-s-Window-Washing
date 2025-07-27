@@ -7,26 +7,43 @@ const Hero: React.FC = () => {
       className={styles.hero}
       role="banner"
       aria-label="Hero section for Dominion Window Shine Services"
+      itemScope
+      itemType="https://schema.org/Service"
     >
       <div className={styles.heroContent}>
         <div className={styles.textSection}>
-          <p className={styles.subtitle}>INTRODUCING DOMINION WINDOW SHINE</p>
-          <h1 className={styles.title}>
-            Professional Window Cleaning Services for{" "}
-            <span className={styles.highlight}>Home & Office</span> in Your Area
-          </h1>
-          <p className={styles.description}>
-            Expert window washing and cleaning services for residential and
-            commercial properties. Crystal clear results with professional
-            equipment and eco-friendly solutions.
+          <p className={styles.subtitle}>
+            PROFESSIONAL WINDOW CLEANING WINNIPEG
           </p>
-          <a
-            className={styles.ctaButton}
-            href="tel:+14312934714"
-            aria-label="Call Dominion Window Shine at +1 (431) 293-4714"
-          >
-            CALL US NOW: →
-          </a>
+          <h1 className={styles.title} itemProp="name">
+            Window Cleaning Services in{" "}
+            <span className={styles.highlight}>Winnipeg, Manitoba</span> - Free
+            Estimates
+          </h1>
+          <p className={styles.description} itemProp="description">
+            Expert window cleaning and washing services for residential and
+            commercial properties in Winnipeg, Manitoba. Crystal clear results
+            with professional equipment, eco-friendly solutions, and fully
+            insured service. Serving Winnipeg, Brandon, Steinbach, and all of
+            Manitoba.
+          </p>
+          <div className={styles.ctaContainer}>
+            <a
+              className={styles.ctaButton}
+              href="tel:+14312934714"
+              aria-label="Call Dominion Window Shine at +1 (431) 293-4714 for window cleaning services"
+              itemProp="telephone"
+            >
+              CALL NOW: (431) 293-4714
+            </a>
+            <a
+              className={styles.ctaButtonSecondary}
+              href="#price-estimator"
+              aria-label="Get free instant quote for window cleaning"
+            >
+              FREE QUOTE
+            </a>
+          </div>
         </div>
       </div>
       <div
