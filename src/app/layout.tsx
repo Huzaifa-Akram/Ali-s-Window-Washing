@@ -7,8 +7,8 @@ import ScrollToHash from "@/components/ScrollToHash";
 export const metadata: Metadata = {
   title: {
     default:
-      "Window Cleaning Services Winnipeg, Manitoba | Dominion Window Shine",
-    template: "%s | Dominion Window Shine - Window Cleaning Manitoba",
+      "Dominion Window Shine | Winnipeg Window Cleaning Experts – Free Estimates",
+    template: "%s | Dominion Window Shine - Winnipeg Window Cleaning",
   },
   description:
     "Professional window cleaning services in Winnipeg, Manitoba & across Canada. Residential & commercial window washing, eavestrough cleaning. Free estimates, eco-friendly solutions. Serving Winnipeg, Brandon, Steinbach since 2020.",

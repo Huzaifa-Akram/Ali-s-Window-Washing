@@ -9,7 +9,7 @@ import FAQs from "@/components/FAQs";
 
 export const metadata: Metadata = {
   title:
-    "Window Cleaning Services Winnipeg, Manitoba | Free Estimates | Dominion Window Shine",
+    "Dominion Window Shine | Winnipeg Window Cleaning Experts – Free Estimates",
   description:
     "Professional window cleaning services in Winnipeg, Manitoba & across Canada. Residential & commercial window washing, eavestrough cleaning, pressure washing. Free estimates, eco-friendly solutions, fully insured. Serving Winnipeg since 2020.",
   keywords:
