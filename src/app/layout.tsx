@@ -121,10 +121,11 @@ export default function RootLayout({
     paymentAccepted: ["Cash", "Credit Card", "Interac", "Online Payment"],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "2080 Pembina Hwy",
       addressLocality: "Winnipeg",
       addressRegion: "MB",
       addressCountry: "CA",
-      postalCode: "R3C 4R7",
+      postalCode: "R3T 2G9",
     },
     geo: {
       "@type": "GeoCoordinates",
@@ -146,13 +147,13 @@ export default function RootLayout({
       },
       {
         "@type": "City",
-        name: "Niverville",
+        name: "Ste Anne",
         addressRegion: "MB",
         addressCountry: "CA",
       },
       {
         "@type": "City",
-        name: "St. Anne",
+        name: "Niverville",
         addressRegion: "MB",
         addressCountry: "CA",
       },
@@ -218,7 +219,7 @@ export default function RootLayout({
       },
       {
         "@type": "City",
-        name: "Assiniboia",
+        name: "Assiniboia Downs",
         addressRegion: "MB",
         addressCountry: "CA",
       },
@@ -241,9 +242,9 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.facebook.com/dominionwindowshine",
-      "https://www.instagram.com/dominionwindowshine",
-      "https://www.linkedin.com/company/dominionwindowshine",
+      "https://www.facebook.com/profile.php?id=61578953031090",
+      "https://www.instagram.com/dominionwindowshine/",
+      // "https://www.linkedin.com/company/dominionwindowshine", // Add when LinkedIn account is created
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -424,7 +425,7 @@ export default function RootLayout({
           name: "What areas do you serve for window cleaning in Manitoba?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We proudly serve Winnipeg and the greater Manitoba region including Steinbach, Niverville, St. Anne, East Saint Paul, West Saint Paul, La Salle, Oak Bluff, Dugald, Grande Pointe, Deacons Corner, Howden, Navin, North Transcona, Assiniboia, Brandon, and Portage la Prairie. Contact us to confirm window cleaning service availability in your specific location.",
+            text: "We proudly serve Winnipeg and the greater Manitoba region including Steinbach, Niverville, Ste Anne, East Saint Paul, West Saint Paul, La Salle, Oak Bluff, Dugald, Grande Pointe, Deacons Corner, Howden, Navin, North Transcona, Assiniboia Downs, Brandon, and Portage la Prairie. Contact us to confirm window cleaning service availability in your specific location.",
           },
         },
         {
