@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
   const contactInfo = {
     phone: "+1 (431) 293-4714",
     email: "info@dominionwindowshine.ca",
-    area: "Winnipeg,Deacons Corner,Oak Bluff, La Salle,Howden,Navin,Dugald,North Transcona,East Saint Paul,West Saint Paul,Assiniboia,Grande Pointe",
+    area: "Winnipeg, Deacons Corner, Oak Bluff, La Salle, Howden, Navin, Dugald, North Transcona, East Saint Paul, West Saint Paul, Assiniboia, Grande Pointe",
     hours: "Mon-Sat: 8AM-6PM",
   };
 
