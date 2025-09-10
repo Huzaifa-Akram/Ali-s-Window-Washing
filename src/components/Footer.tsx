@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
 
   const contactInfo = {
     phone: "+1 (431) 293-4714",
-    email: "info@truenorthwindowwashing.com",
-    address: "123 Main Street, Your City, State 12345",
+    email: "info@dominionwindowshine.ca",
+    area: "Winnipeg,Deacons Corner,Oak Bluff, La Salle,Howden,Navin,Dugald,North Transcona,East Saint Paul,West Saint Paul,Assiniboia,Grande Pointe",
     hours: "Mon-Sat: 8AM-6PM",
   };
 
@@ -202,9 +202,9 @@ const Footer: React.FC = () => {
                 <div className={styles.contactItem}>
                   <MapPin className={styles.contactIcon} aria-hidden="true" />
                   <div className={styles.contactDetails}>
-                    <span className={styles.contactLabel}>Visit Us</span>
+                    <span className={styles.contactLabel}>Areas We Serve</span>
                     <address className={styles.contactAddress}>
-                      {contactInfo.address}
+                      {contactInfo.area}
                     </address>
                   </div>
                 </div>

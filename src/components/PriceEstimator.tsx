@@ -180,14 +180,14 @@ export default function PriceEstimator() {
             This is for Residential use only. If you require a commercial
             cleaning quote please contact us at{" "}
             <a href="tel:(204)414-0944" className={styles.phoneLink}>
-              (000) 000-00000
+              +1 (431) 293-4714
             </a>{" "}
             or email{" "}
             <a
-              href="mailto:info@pictureperfectwc.ca"
+              href="mailto:info@dominionwindowshine.ca"
               className={styles.emailLink}
             >
-              info@truenorthwindowwashing.ca
+              info@dominionwindowshine.ca
             </a>
           </p>{" "}
         </div>{" "}
